@@ -1,1 +1,0 @@
-﻿public enum EnumRules { aucun, peutTuer, nePasTuer, ecoute, peutDetruit, nePeutPasToucher, nePeutPasBlesser };
