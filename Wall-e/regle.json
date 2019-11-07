@@ -1,0 +1,40 @@
+{  
+    "data" : [
+        {
+            "id" : 0,
+            "tag" : "aucune",
+            "description" : "aucune"
+        },
+        {
+            "id" : 1,
+            "tag" : "nePasTuer",
+            "description" : "ne doit pas tuer"
+        },
+
+        {
+            "id" : 2,
+            "tag" : "nePasEtreDetruit",
+            "description" : "ne doit pas être détruit"
+        },
+
+        {
+            "id" : 3,
+            "tag" : "etreDetruit",
+            "description" : "doit être détruit"
+        },
+
+        {
+            "id" : 4,
+            "tag" : "tuer",
+            "description" : "doit tuer"
+        },
+
+		{
+            "id" : 5,
+            "tag" : "ecoute",
+            "description" : "j'écoute"
+        }
+
+
+    ]
+}
