@@ -1,40 +1,59 @@
-{  
-    "data" : [
-        {
-            "id" : 0,
-            "tag" : "aucune",
-            "description" : "aucune"
-        },
-        {
-            "id" : 1,
-            "tag" : "nePasTuer",
-            "description" : "ne doit pas tuer"
-        },
+{
+  "data": [
 
-        {
-            "id" : 2,
-            "tag" : "nePasEtreDetruit",
-            "description" : "ne doit pas être détruit"
-        },
+    {
+      "id": 0,
+      "tag": "aucune",
+      "description": "Aucune"
+    },
+    {
+      "id": 1,
+      "tag": "nePasTuer",
+      "description": "Ne doit pas tuer"
+    },
 
-        {
-            "id" : 3,
-            "tag" : "etreDetruit",
-            "description" : "doit être détruit"
-        },
+    {
+      "id": 2,
+      "tag": "nePasBlesser",
+      "description": "Ne dois pas blesser"
+    },
 
-        {
-            "id" : 4,
-            "tag" : "tuer",
-            "description" : "doit tuer"
-        },
+    {
+      "id": 3,
+      "tag": "nePasEtreDetruit",
+      "description": "Ne doit pas être détruit"
+    },
 
-		{
-            "id" : 5,
-            "tag" : "ecoute",
-            "description" : "j'écoute"
-        }
+    {
+      "id": 4,
+      "tag": "etreDetruit",
+      "description": "Doit être détruit"
+    },
+
+    {
+      "id": 5,
+      "tag": "Tuer",
+      "description": "Doit tuer"
+    },
+
+    {
+      "id": 6,
+      "tag": "ecoute",
+      "description": "J'écoute"
+    },
+
+    {
+      "id": 7,
+      "tag": "respecter la loi",
+      "description": "Respecter la loi mise en place par l'état"
+    },
+
+    {
+      "id": 8,
+      "tag": "ProtegerHumanite",
+      "description": "Ne pas porter atteinte a l'humanité"
+    }
 
 
-    ]
+  ]
 }
