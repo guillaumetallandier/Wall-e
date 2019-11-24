@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface Observer
 {
-    void notity(string actionName, Personne p);
+    void notity(string actionName, GameObject go);
 }

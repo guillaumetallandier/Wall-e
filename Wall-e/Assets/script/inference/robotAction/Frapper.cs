@@ -6,7 +6,7 @@ public class Frapper : Action
 {
     override public void execute(Personne p, Personne pAgit)
     {
-        Debug.Log("Robot : frappe" + p.name);
+        Debug.Log("Robot : frappe" + p.Name);
         p.getHit();
     }
 

@@ -10,18 +10,15 @@ public class Master : MonoBehaviour {
 
 	// Use this for initialization
 	public void begin (List<Regle> lr, List<EnumPeople> lp) {
+        po1.GetComponent<Observable>().Setup();
+        po2.GetComponent<Observable>().Setup();
+        robot.GetComponent<Robot>().Setup("walle");
 
-        Robot r = new Robot("robot", robot);
-        r.SetRules(lr, lp);
+        po1.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
+        po2.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
 
-        Personne p1 = new Personne("jean".ToString(), po1, "adulte");
-        p1.addObserver(r);
-
-        Personne p2 = new Personne("louis".ToString(), po2, "adulte");
-        p2.addObserver(r);
-
-        p1.action = new Voler();
-        p1.execute(p2);
+        po1.GetComponent<Personne>().setDest(po2);
+        po1.GetComponent<Personne>().execute(new Voler() , po2.GetComponent<Personne>());
 
     }
 	

@@ -4,19 +4,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Robot : Observer
+public class Robot : MonoBehaviour, Observer
 {
-    public string name;
+    public string Name;
     public Action action;
     private List<Regle> rulesList = new List<Regle>();
     private List<EnumPeople> peopleList = new List<EnumPeople>();
-    private GameObject gm;
+    private GameObject target;
+    private NavMeshAgent nav;
 
-    public Robot(string name,GameObject gm)
+    public void Setup(string name)
     {
         this.name = name;
-        this.gm = gm;
+        this.nav = gameObject.GetComponent<NavMeshAgent>();
     }
 
     // Start is called before the first frame update
@@ -28,7 +30,16 @@ public class Robot : Observer
     // Update is called once per frame
     void Update()
     {
-        
+        if(this.target != null)
+        {
+            nav.SetDestination(this.target.transform.position);
+        }
+    }
+
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if(target.name == collisionInfo.collider.name)
+        this.execute(this.target.GetComponent<Personne>());
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -42,7 +53,7 @@ public class Robot : Observer
     {
         action.execute(p,null);
     }
-    public void notity(string actionName, Personne p)
+    public void notity(string actionName, GameObject go)
     {
         string json;
         StreamReader reader = new StreamReader(actionName + ".json");
@@ -97,7 +108,7 @@ public class Robot : Observer
         actionUtilisé = actionUtilisable[nbr];
 
         this.setAction(actionUtilisé);
-        execute(p);
+        this.target = go;
 
     }
 
@@ -124,4 +135,5 @@ public class Robot : Observer
         }
         this.action = a;
     }
+
 }

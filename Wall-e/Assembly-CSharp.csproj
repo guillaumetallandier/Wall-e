@@ -66,6 +66,7 @@
      <Compile Include="Assets\script\inference\robotAction\Frapper.cs" />
      <Compile Include="Assets\script\inference\robotAction\Suicide.cs" />
      <Compile Include="Assets\script\inference\robotAction\Tuer.cs" />
+     <Compile Include="Assets\script\Item.cs" />
      <Compile Include="Assets\script\Master.cs" />
      <Compile Include="Assets\script\menuRegle\EnumPeople.cs" />
      <Compile Include="Assets\script\menuRegle\GroupScript.cs" />
@@ -103,7 +104,7 @@
  <HintPath>D:/dev/Unity Hub/UnityEngine/2017.2.0f3/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/moi/document/IUT/projetT3/Wall-e/Assets/Newtonsoft.Json.dll</HintPath>
+ <HintPath>D:/moi/document/IUT/projetT3/t432_maf19-t3-c/Wall-e/Assets/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/adamg/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>

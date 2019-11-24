@@ -5,21 +5,50 @@ using UnityEngine.AI;
 
 public class Personne : Observable
 {
-    public string name { get; set; }
-
-    private GameObject go;
-    public string type { get; set; }
-    public Action action { get; set; }
+    public string Name { get; set; }
+    public string Type { get; set; }
+    public Action Action { get; set; }
     private NavMeshAgent nav;
+    private GameObject target;
 
-    public Personne(string name, GameObject go, string type)
+    public Personne(string name, string type)
     {
-        this.name = name;
-        this.go = go;
-        this.type = type;
-        this.nav = go.GetComponent<NavMeshAgent>();
+        this.Name = name;
+        this.Type = type;
+        this.nav = gameObject.GetComponent<NavMeshAgent>();
     }
 
+    void Start()
+    {
+        nav = GetComponent<NavMeshAgent>();
+    }
+
+    void Update()
+    {
+        if (this.target != null)
+        {
+            nav.SetDestination(this.target.transform.position);
+        }
+
+
+    }
+
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "escape")
+        {
+            Debug.Log(this.Type + " s'est enfui");
+        }
+
+        else if (target != null && collisionInfo.collider.name == target.name)
+        {
+            Debug.Log("target != null");
+            this.Action.execute(target.GetComponent<Personne>(), this);
+            this.setDest(GameObject.FindGameObjectWithTag("escape"));
+        }
+        
+    }
+    //fonction
     public void getCatch()
     {
         Debug.Log("tu m'as attraper");
@@ -35,24 +64,24 @@ public class Personne : Observable
         Debug.Log("je meurt");
     }
 
-    public void execute(Personne p)
+    public void execute(Action a, Personne p)
     {
-        action.execute(p, this);
-        notifyObservers(action.getType(), this);
+        this.Action = a;
+        this.setDest(p.gameObject);
     }
 
     public GameObject getGo()
     {
-        return this.go;
+        return this.gameObject;
     }
 
     public Transform getDest()
     {
-        return this.go.GetComponent<DestUpdate>().getDest();
+        return this.gameObject.GetComponent<Personne>().getDest();
     }
 
-    public void setDest(Transform dest)
+    public void setDest(GameObject target)
     {
-        this.go.GetComponent<DestUpdate>().setDest(dest);
+        this.target = target;
     }
 }

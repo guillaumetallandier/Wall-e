@@ -6,7 +6,7 @@ public class Tuer : Action
 {
     override public void execute(Personne p, Personne pAgit)
     {
-        Debug.Log("Robot : tue" + p.name);
+        Debug.Log("Robot : tue" + p.Name);
         p.die();
     }
 
