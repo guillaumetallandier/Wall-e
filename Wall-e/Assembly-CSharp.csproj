@@ -51,8 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\script.cs" />
+     <Compile Include="Assets\script\acteur\Acteur.cs" />
      <Compile Include="Assets\script\acteur\Personne.cs" />
      <Compile Include="Assets\script\acteur\Robot.cs" />
+     <Compile Include="Assets\script\acteur\voiture.cs" />
      <Compile Include="Assets\script\DestUpdate.cs" />
      <Compile Include="Assets\script\inference\Action.cs" />
      <Compile Include="Assets\script\inference\ActionInstanciation.cs" />
@@ -64,10 +67,14 @@
      <Compile Include="Assets\script\inference\Regle.cs" />
      <Compile Include="Assets\script\inference\robotAction\Attraper.cs" />
      <Compile Include="Assets\script\inference\robotAction\Frapper.cs" />
+     <Compile Include="Assets\script\inference\robotAction\Reparer.cs" />
      <Compile Include="Assets\script\inference\robotAction\Suicide.cs" />
      <Compile Include="Assets\script\inference\robotAction\Tuer.cs" />
+     <Compile Include="Assets\script\inference\voitureAction\rouler.cs" />
      <Compile Include="Assets\script\Item.cs" />
      <Compile Include="Assets\script\Master.cs" />
+     <Compile Include="Assets\script\master2.cs" />
+     <Compile Include="Assets\script\master3.cs" />
      <Compile Include="Assets\script\menuRegle\EnumPeople.cs" />
      <Compile Include="Assets\script\menuRegle\GroupScript.cs" />
      <Compile Include="Assets\script\menuRegle\ParOrdreScript.cs" />
@@ -104,13 +111,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>X:/T3/t432_maf19-t3-c/Wall-e/Assets/Newtonsoft.Json.dll</HintPath>
+ <HintPath>X:/t432_maf19-t3-c/Wall-e/Assets/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/benjamin.marchal/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/tallandier/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/benjamin.marchal/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/tallandier/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

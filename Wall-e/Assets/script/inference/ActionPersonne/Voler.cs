@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Voler : Action {
 
-	override public void execute(Personne p, Personne pAgit)
-    {
-        Debug.Log(pAgit.Name + " vole : " + p.Name);
-        pAgit.notifyObservers(this.getType(), pAgit.gameObject);
+	override public void execute(Personne p, GameObject gm)    {
+        Debug.Log(gm.name + " vole : " + p.name);
+        gm.GetComponent<Observable>().notifyObservers(this.getType(), gm.gameObject);
         
     }
 
