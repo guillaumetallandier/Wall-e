@@ -22,7 +22,12 @@ public class Personne : Observable
     {
         nav = GetComponent<NavMeshAgent>();
     }
+    public void SetUp(string name, string type)
+    {
+        this.Name = name;
+        this.Type = type; 
 
+    }
     void Update()
     {
         if (this.target != null)
@@ -37,7 +42,7 @@ public class Personne : Observable
     {
         if (collisionInfo.collider.tag == "escape")
         {
-            Debug.Log(this.Type + " s'est enfui");
+            Debug.Log(this.Name + " s'est enfui");
         }
 
         else if (target != null && collisionInfo.collider.name == target.name)
@@ -48,6 +53,8 @@ public class Personne : Observable
         }
         
     }
+   
+
     //fonction
     public void getCatch()
     {
