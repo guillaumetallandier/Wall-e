@@ -1,0 +1,11 @@
+{
+  "attraper": " a attrape ",
+  "autodestruction": " s'auto-detruit, regles conflictuelles",
+  "frapper": " frappe",
+  "tuer": " tue ",
+  "volerDebut": " a volé le porte monnaie de ",
+  "volerF": "le voleur s'enfuit sans le butin",
+  "volerR ": "le voleur s'enfuit avec le butin'",
+  "volerSansOrdre": " mais le robot ne fait rien puisque aucun ordre ne lui a ete donne",
+  "voleurAttraper": "le voleur c'est fait attraper "
+}

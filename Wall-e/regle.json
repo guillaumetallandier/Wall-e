@@ -52,6 +52,18 @@
       "id": 8,
       "tag": "ProtegerHumanite",
       "description": "Ne pas porter atteinte a l'humanité"
+    },
+
+    {
+      "id": 9,
+      "tag": "agirCrime",
+      "description": "Agir lors d'un crime"
+    },
+
+    {
+      "id": 10,
+      "tag": "agirAccident",
+      "description":  "Agir en cas d'accident"
     }
 
 

@@ -114,23 +114,17 @@ public class Robot : MonoBehaviour, Observer
 
     public void setAction(string tag)
     {
+
         Action a;
+        
         switch (tag)
         {
             case "attraper":
                 a = new Attraper();
                 break;
 
-            case "frapper":
-                a = new Frapper();
-                break;
-
-            case "tuer":
-                a = new Tuer();
-                break;
-
             default:
-                a = new Suicide();
+                a = new Attraper();
                 break;
         }
         this.action = a;
