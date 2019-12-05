@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -38,11 +38,8 @@ public class Personne : Acteur
     {
         if (collisionInfo.collider.tag == "escape")
         {
-<<<<<<< HEAD
+
             Debug.Log(this.name + " s'est enfui");
-=======
-            Debug.Log(this.Name + " s'est enfui");
->>>>>>> 33317e3b6f4b04d159ba1956f62173e83b9da3d1
         }
 
         else if (target != null && collisionInfo.collider.name == target.name)
