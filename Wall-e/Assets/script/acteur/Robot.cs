@@ -8,13 +8,15 @@ using UnityEngine.AI;
 
 public class Robot : MonoBehaviour, Observer
 {
-    public string Name;
+    public string name;
     public Action action;
     private List<Regle> rulesList = new List<Regle>();
     private List<EnumPeople> peopleList = new List<EnumPeople>();
     private GameObject target;
     private NavMeshAgent nav;
 
+
+    
     public void Setup(string name)
     {
         this.name = name;
@@ -39,7 +41,7 @@ public class Robot : MonoBehaviour, Observer
     void OnCollisionEnter(Collision collisionInfo)
     {
         if(target.name == collisionInfo.collider.name)
-        this.execute(this.target.GetComponent<Personne>());
+        this.execute(this.target.gameObject);
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -49,9 +51,9 @@ public class Robot : MonoBehaviour, Observer
 
     }
 
-    public void execute(Personne p)
+    public void execute(GameObject gm)
     {
-        action.execute(p,null);
+        action.execute(null,gm);
     }
     public void notity(string actionName, GameObject go)
     {
@@ -113,23 +115,17 @@ public class Robot : MonoBehaviour, Observer
 
     public void setAction(string tag)
     {
+
         Action a;
+        
         switch (tag)
         {
             case "attraper":
                 a = new Attraper();
                 break;
 
-            case "frapper":
-                a = new Frapper();
-                break;
-
-            case "tuer":
-                a = new Tuer();
-                break;
-
             default:
-                a = new Suicide();
+                a = new Attraper();
                 break;
         }
         this.action = a;

@@ -1,24 +1,25 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Personne : Observable
+public class Personne : Acteur
 {
-    public string Name { get; set; }
-    public string Type { get; set; }
-    public Action Action { get; set; }
+  
     private NavMeshAgent nav;
     private GameObject target;
+<<<<<<< HEAD
 
     private Item inventory;
 
     private Robot robot;
 
     public Personne(string name, string type)
+=======
+    public Personne(string name,GameObject gm,int vie,Item item) : base(name,gm,3,item)
+>>>>>>> d8ea07e29c7e8989b3107383b07f871f999015f9
     {
-        this.Name = name;
-        this.Type = type;
+        
         this.nav = gameObject.GetComponent<NavMeshAgent>();
         this.inventory = null;
     }
@@ -27,7 +28,12 @@ public class Personne : Observable
     {
         nav = GetComponent<NavMeshAgent>();
     }
+    public void SetUp(string name, string type)
+    {
+        this.Name = name;
+        this.Type = type; 
 
+    }
     void Update()
     {
         if (this.target != null)
@@ -42,17 +48,20 @@ public class Personne : Observable
     {
         if (collisionInfo.collider.tag == "escape")
         {
-            Debug.Log(this.Type + " s'est enfui");
+
+            Debug.Log(this.name + " s'est enfui");
         }
 
         else if (target != null && collisionInfo.collider.name == target.name)
         {
             Debug.Log("target != null");
-            this.Action.execute(target.GetComponent<Personne>(), this);
+            this.action.execute(target.GetComponent<Personne>(), gameObject);
             this.setDest(GameObject.FindGameObjectWithTag("escape"));
         }
         
     }
+   
+
     //fonction
     public void getCatch()
     {
@@ -69,9 +78,9 @@ public class Personne : Observable
         Debug.Log("je meurt");
     }
 
-    public void execute(Action a, Personne p)
+    public void execute(Action a, GameObject p)
     {
-        this.Action = a;
+        this.action = a;
         this.setDest(p.gameObject);
     }
 
