@@ -23,7 +23,7 @@ public class Master : MonoBehaviour {
         po2.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
 
         po1.GetComponent<Personne>().setDest(po2);
-        po1.GetComponent<Personne>().execute(new Voler() , po2.GetComponent<Personne>());
+        po1.GetComponent<Personne>().execute(new Voler() , po2);
 
         po1.GetComponent<Personne>().SetUp( "Gege","adult");
         po2.GetComponent<Personne>().SetUp("Bernard", "adult");

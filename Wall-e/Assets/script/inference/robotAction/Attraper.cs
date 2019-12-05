@@ -7,8 +7,11 @@ using UnityEngine;
 
 public class Attraper : Action
 {
-    override public void execute(Personne p, Personne pAgit)
+    override public void execute(Personne p, GameObject gm)
     {
+<<<<<<< HEAD
+        Debug.Log("Robot : Attrape " + gm.name);
+=======
         string json;
         StreamReader readervict = new StreamReader("texte.json", Encoding.UTF8);
         json = readervict.ReadToEnd();
@@ -18,6 +21,7 @@ public class Attraper : Action
 
         pAgit.notifyObservers(this.getType(), p.gameObject);
 
+>>>>>>> 33317e3b6f4b04d159ba1956f62173e83b9da3d1
     }
 
     public override string getType()

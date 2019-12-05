@@ -1,20 +1,16 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Personne : Observable
+public class Personne : Acteur
 {
-    public string Name { get; set; }
-    public string Type { get; set; }
-    public Action Action { get; set; }
+  
     private NavMeshAgent nav;
     private GameObject target;
-
-    public Personne(string name, string type)
+    public Personne(string name,GameObject gm,int vie,Item item) : base(name,gm,3,item)
     {
-        this.Name = name;
-        this.Type = type;
+        
         this.nav = gameObject.GetComponent<NavMeshAgent>();
     }
 
@@ -42,13 +38,14 @@ public class Personne : Observable
     {
         if (collisionInfo.collider.tag == "escape")
         {
-            Debug.Log(this.Name + " s'est enfui");
+
+            Debug.Log(this.name + " s'est enfui");
         }
 
         else if (target != null && collisionInfo.collider.name == target.name)
         {
             Debug.Log("target != null");
-            this.Action.execute(target.GetComponent<Personne>(), this);
+            this.action.execute(target.GetComponent<Personne>(), gameObject);
             this.setDest(GameObject.FindGameObjectWithTag("escape"));
         }
         
@@ -71,9 +68,9 @@ public class Personne : Observable
         Debug.Log("je meurt");
     }
 
-    public void execute(Action a, Personne p)
+    public void execute(Action a, GameObject p)
     {
-        this.Action = a;
+        this.action = a;
         this.setDest(p.gameObject);
     }
 
