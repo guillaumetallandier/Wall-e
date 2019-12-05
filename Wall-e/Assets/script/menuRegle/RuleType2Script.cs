@@ -52,7 +52,6 @@ public class RuleType2Script : RuleScript
                 GameObject spawnedGameObject = (GameObject)GameObject.Instantiate(ParOrdre);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
-                spawnedGameObject.GetComponent<ParOrdreScript>().Setup(gameObject);
                 this.son = spawnedGameObject;
                 Debug.Log(p);
                 break;

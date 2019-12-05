@@ -1,0 +1,21 @@
+{  
+    "data" : [
+      {
+        "id": 1,
+        "tag": "attraper",
+        "listeRegle": [ 1, 2 ]
+      },
+
+      {
+        "id": 2,
+        "tag": "utiliserObjet",
+        "listeRegle": [ 2, 1 ]
+      },
+
+      {
+        "id": 3,
+        "tag": "prevenirPompier",
+        "listeRegle": [7]
+      }
+    ]
+}

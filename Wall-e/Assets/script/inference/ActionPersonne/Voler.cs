@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Voler : Action {
 
-	override public void execute(Personne p, Personne pAgit)
+	override public void execute(Personne persVolee, Personne persVoleur)
     {
-        Debug.Log(pAgit.Name + " vole : " + p.Name);
-        pAgit.notifyObservers(this.getType(), pAgit.gameObject);
-        
+        persVolee.presenteInventaire(); //inventaire humain: doir avoir porte-feuille
+
+        Debug.Log(persVoleur.name + " vole : " + persVolee.name);
+        persVoleur.notifyObservers(this.getType(), persVoleur.gameObject);
+
+        persVoleur.setItem(persVolee.getItem());
+        persVolee.setItem(null);
+
+        persVoleur.presenteInventaire(); //inventaire voleur : doit avoir porte-feuille
+        persVolee.presenteInventaire(); //inventaire humain: doir etre vide
+
+        persVolee.estVoler();
     }
 
     public override string getType()

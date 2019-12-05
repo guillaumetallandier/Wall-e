@@ -70,7 +70,6 @@ public class Robot : MonoBehaviour, Observer
                 if (a.getRegleList().Contains(this.rulesList[i].id))
                 {
                     respectRegle[i] = true;
-
                 }
                 else
                 {
@@ -134,6 +133,98 @@ public class Robot : MonoBehaviour, Observer
                 break;
         }
         this.action = a;
+    }
+
+    public void recevoirOrdre(string ordre, string instigateur)
+    {
+        bool respect = true;
+        int nbRegles = rulesList.Count();
+        int i = -1;
+
+        while(respect && i < nbRegles && nbRegles != 0)
+        {
+            respect = respectRegles(ordre,rulesList[i+1]);
+            i++;
+        }
+
+        if (!respect)
+        {
+            i++;
+            Debug.Log("Robot : Désolé " + instigateur + ". Je ne peux donner satisfaction à votre demande car celle-ci rentre en contradiction avec la rêgle n°" + i + " intégrée dans mon processeur qui est : " + "\n" +
+                "'" + rulesList[i].ToString() + "'\n" +
+                "Veuillez reformulez votre demande");
+        }
+        else
+        {
+            Debug.Log("Robot : Je vais accéder à votre requête " + instigateur);
+            this.setAction(ordre);
+        }
+    }
+
+    public bool respectRegles(string ordre, Regle regle)
+    {
+        bool ordreRespecteRegle = true;
+
+        /*Coder vérification du respect des rêgles*/
+
+        StreamReader readerRegle = new StreamReader("regle.json");
+        StreamReader readerSituation = new StreamReader("voler.json");
+
+        string lectureRegle = readerRegle.ReadToEnd();
+        var resultRegle = JsonConvert.DeserializeObject<ApiAction>(lectureRegle);
+
+        /*
+
+        Dictionary<string, bool[]> respectList = new Dictionary<string, bool[]>();
+
+        foreach (ActionInstanciation a in result.actions)
+        {
+            bool[] respectRegle = new bool[rulesList.Count()];
+            for (int i = 0; i < this.rulesList.Count(); i++)
+            {
+                if (a.getRegleList().Contains(this.rulesList[i].id))
+                {
+                    respectRegle[i] = true;
+                }
+                else
+                {
+                    respectRegle[i] = false;
+                }
+            }
+            respectList.Add(a.getTag(), respectRegle);
+
+        }
+
+        int max = 0;
+        List<string> actionUtilisable = new List<string>();
+        foreach (KeyValuePair<string, bool[]> couple in respectList)
+        {
+            int j = 0;
+            while (j < couple.Value.Length && couple.Value[j])
+            {
+                j++;
+            }
+            if (j > max)
+            {
+                max = j;
+                actionUtilisable.Clear();
+                actionUtilisable.Add(couple.Key);
+            }
+            else if (j == max)
+            {
+                actionUtilisable.Add(couple.Key);
+            }
+        }
+        int nbr = 0;
+        string actionUtilisé;
+        System.Random rand = new System.Random();
+        nbr = rand.Next(actionUtilisable.Count());
+        actionUtilisé = actionUtilisable[nbr];
+
+        this.setAction(actionUtilisé);
+        this.target = go;*/
+
+        return ordreRespecteRegle;
     }
 
 }

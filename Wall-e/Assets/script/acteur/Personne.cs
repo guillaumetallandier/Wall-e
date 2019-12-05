@@ -11,11 +11,16 @@ public class Personne : Observable
     private NavMeshAgent nav;
     private GameObject target;
 
+    private Item inventory;
+
+    private Robot robot;
+
     public Personne(string name, string type)
     {
         this.Name = name;
         this.Type = type;
         this.nav = gameObject.GetComponent<NavMeshAgent>();
+        this.inventory = null;
     }
 
     void Start()
@@ -83,5 +88,43 @@ public class Personne : Observable
     public void setDest(GameObject target)
     {
         this.target = target;
+    }
+
+    public Item getItem()
+    {
+        return inventory;
+    }
+
+    public void setItem(Item item)
+    {
+        inventory = item;
+    }
+
+    public void setRobot(Robot bidule) {
+        robot = bidule;
+    }
+
+    public void presenteInventaire()
+    {
+        if(inventory == null)
+        {
+            Debug.Log(this.name + " : Mon inventaire est vide");
+        }
+        else
+        {
+            Debug.Log(this.name + " : Je possède : " + inventory.getType());
+        }
+    }
+
+    public void estVoler()
+    {
+        Debug.Log("Au voleur !! A l'assassin !!! AU MEURTRIER !!!!!!");
+        this.ordonne("attraper");
+    }
+
+    public void ordonne(string ordre)
+    {
+        Debug.Log(ordre);
+        robot.recevoirOrdre(ordre,this.Name);
     }
 }

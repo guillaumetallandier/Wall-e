@@ -24,12 +24,6 @@ public class ParOrdreScript : MonoBehaviour
     public Dropdown third;
     public Dropdown forth;
     private List<Dropdown> ddTab = new List<Dropdown>();
-    private GameObject parentComm;
-
-    public void Setup(GameObject go)
-    {
-        this.parentComm = go;
-    }
 
     void Start()
     {
