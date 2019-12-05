@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class Action
 {
 
-    public abstract void execute(Personne p, Personne pAgit);
+    public abstract void execute(Personne p, GameObject gm);
     public abstract string getType();
 }

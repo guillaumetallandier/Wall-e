@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Suicide : Action
 {
-    override public void execute(Personne p, Personne pAgit)
+    override public void execute(Personne p, GameObject gm)
     {
         Debug.Log("Robot : autodestruction");
     }

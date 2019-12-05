@@ -52,8 +52,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Nav.cs" />
+     <Compile Include="Assets\script.cs" />
+     <Compile Include="Assets\script\acteur\Acteur.cs" />
      <Compile Include="Assets\script\acteur\Personne.cs" />
      <Compile Include="Assets\script\acteur\Robot.cs" />
+     <Compile Include="Assets\script\acteur\voiture.cs" />
      <Compile Include="Assets\script\DestUpdate.cs" />
      <Compile Include="Assets\script\inference\Action.cs" />
      <Compile Include="Assets\script\inference\ActionInstanciation.cs" />
@@ -69,12 +72,17 @@
      <Compile Include="Assets\script\inference\robotAction\Frapper.cs" />
      <Compile Include="Assets\script\inference\robotAction\PreparerNourriture.cs" />
      <Compile Include="Assets\script\inference\robotAction\PrevenirAutorite.cs" />
+     <Compile Include="Assets\script\inference\robotAction\Reparer.cs" />
      <Compile Include="Assets\script\inference\robotAction\Suicide.cs" />
      <Compile Include="Assets\script\inference\robotAction\Tuer.cs" />
      <Compile Include="Assets\script\inference\robotAction\UtiliserObjet.cs" />
+     <Compile Include="Assets\script\inference\Texte.cs" />
+     <Compile Include="Assets\script\inference\voitureAction\rouler.cs" />
      <Compile Include="Assets\script\Item.cs" />
      <Compile Include="Assets\script\mainMenu\btnEteindre.cs" />
      <Compile Include="Assets\script\Master.cs" />
+     <Compile Include="Assets\script\master2.cs" />
+     <Compile Include="Assets\script\master3.cs" />
      <Compile Include="Assets\script\menuRegle\EnumPeople.cs" />
      <Compile Include="Assets\script\menuRegle\GroupScript.cs" />
      <Compile Include="Assets\script\menuRegle\ParOrdreScript.cs" />
