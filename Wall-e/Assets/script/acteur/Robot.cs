@@ -41,7 +41,7 @@ public class Robot : MonoBehaviour, Observer
     void OnCollisionEnter(Collision collisionInfo)
     {
         if(target.name == collisionInfo.collider.name)
-        this.execute(this.target.gameObject);
+        this.execute(collisionInfo.gameObject.GetComponent<Personne>(),this.target.gameObject);
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -51,9 +51,9 @@ public class Robot : MonoBehaviour, Observer
 
     }
 
-    public void execute(GameObject gm)
+    public void execute(Personne p, GameObject gm)
     {
-        action.execute(null,gm);
+        action.execute(p,gm);
     }
     public void notity(string actionName, GameObject go)
     {

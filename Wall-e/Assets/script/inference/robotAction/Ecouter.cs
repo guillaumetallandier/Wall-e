@@ -6,9 +6,9 @@ public class Ecouter : Action
 {
     private List<Regle> rulesList;
 
-    override public void execute(Personne p, Personne pAgit)
+    override public void execute(Personne p, GameObject gm)
     {   
-        Debug.Log("Robot : ecoute " + p.Name);
+        Debug.Log("Robot : ecoute " + p.name);
     }
 
     public override string getType()

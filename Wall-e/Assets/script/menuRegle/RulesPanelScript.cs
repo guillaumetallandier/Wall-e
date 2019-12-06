@@ -25,7 +25,7 @@ public class RulesPanelScript : MonoBehaviour
             listeRegle.Add(rl.getRegle());
         }
 
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master2>().begin(listeRegle, this.peopleList);
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().begin(listeRegle, this.peopleList);
         gameObject.SetActive(false);
 
     }

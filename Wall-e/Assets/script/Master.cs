@@ -9,14 +9,12 @@ public class Master : MonoBehaviour {
     public GameObject po1; //voleur
     public GameObject po2; //humain
     public GameObject robot;
-<<<<<<< HEAD
+
     public GameObject GO_item;
     public GameObject ITEM_item;
-=======
+
     public Text texte;
     private bool fin = false;
-    
->>>>>>> d8ea07e29c7e8989b3107383b07f871f999015f9
 
     // Use this for initialization
     public void begin (List<Regle> lr, List<EnumPeople> lp) {
@@ -30,30 +28,22 @@ public class Master : MonoBehaviour {
         po1.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
         po2.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
 
-        po2.GetComponent<Personne>().setItem(new Item(GO_item,"porte-feuille"));
+        po1.GetComponent<Personne>().SetUp("Gege");
+        po2.GetComponent<Personne>().SetUp("Bernard");
 
-        po1.GetComponent<Personne>().setDest(po2);
-<<<<<<< HEAD
-        po1.GetComponent<Personne>().execute(new Voler() , po2.GetComponent<Personne>());
-=======
+        po2.GetComponent<Personne>().setItem(new Item("porte-feuille", GO_item));
+
         po1.GetComponent<Personne>().execute(new Voler() , po2);
 
-        po1.GetComponent<Personne>().SetUp( "Gege","adult");
-        po2.GetComponent<Personne>().SetUp("Bernard", "adult");
        // pauseSituation();
 
->>>>>>> d8ea07e29c7e8989b3107383b07f871f999015f9
     }
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
          
 	}
-=======
->>>>>>> d8ea07e29c7e8989b3107383b07f871f999015f9
 
-	}
   
     public Action aleAction()
     {

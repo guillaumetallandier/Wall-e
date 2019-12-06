@@ -8,30 +8,23 @@ public class Personne : Acteur
   
     private NavMeshAgent nav;
     private GameObject target;
-<<<<<<< HEAD
-
-    private Item inventory;
 
     private Robot robot;
 
-    public Personne(string name, string type)
-=======
+
     public Personne(string name,GameObject gm,int vie,Item item) : base(name,gm,3,item)
->>>>>>> d8ea07e29c7e8989b3107383b07f871f999015f9
     {
         
         this.nav = gameObject.GetComponent<NavMeshAgent>();
-        this.inventory = null;
     }
 
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
     }
-    public void SetUp(string name, string type)
+    public void SetUp(string name)
     {
-        this.Name = name;
-        this.Type = type; 
+        base.name = name;
 
     }
     void Update()
@@ -101,12 +94,12 @@ public class Personne : Acteur
 
     public Item getItem()
     {
-        return inventory;
+        return this.item;
     }
 
     public void setItem(Item item)
     {
-        inventory = item;
+        this.item = item;
     }
 
     public void setRobot(Robot bidule) {
@@ -115,13 +108,13 @@ public class Personne : Acteur
 
     public void presenteInventaire()
     {
-        if(inventory == null)
+        if (this.name == null)
         {
             Debug.Log(this.name + " : Mon inventaire est vide");
         }
         else
         {
-            Debug.Log(this.name + " : Je possède : " + inventory.getType());
+            Debug.Log(this.name + " : Je possède : " + item.name);
         }
     }
 
@@ -134,6 +127,6 @@ public class Personne : Acteur
     public void ordonne(string ordre)
     {
         Debug.Log(ordre);
-        robot.recevoirOrdre(ordre,this.Name);
+        robot.recevoirOrdre(ordre,this.name);
     }
 }
