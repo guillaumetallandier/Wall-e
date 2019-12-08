@@ -6,7 +6,7 @@ public class PreparerNourriture : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : prepare plat demandé");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("preparerNourriture", p.name, "");
     }
 
     public override string getType()

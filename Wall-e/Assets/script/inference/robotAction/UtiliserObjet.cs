@@ -6,7 +6,7 @@ public class UtiliserObjet : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : utilise objet proche");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("utiliser", "", "");
     }
 
     public override string getType()

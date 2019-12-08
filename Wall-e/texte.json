@@ -1,11 +1,79 @@
 {
-  "attraper": " a attrape ",
-  "autodestruction": " s'auto-detruit, regles conflictuelles",
+  //Texte explication de la situation 
+  "attraper": " a attrapé ",
+  "autodestruction": " s'auto-detruit, règles conflictuelles",
   "frapper": " frappe",
   "tuer": " tue ",
+  "preparerNourriture": " prépare le plat demandé par ",
+  "reparer": " répare la voiture de ",
+  "utiliser": " utilise un objet afin de s'aider",
+  "vRoule": "la voiture roule quand soudainement ",
+
+  //Situation Fin du monde 
+  "NucDebut": " a complétement perdu la tête et veut detruire l'humanite ! Il a les codes nucléaires de toute les puissances mondiales équiper et menace de les déclencher",
+  "NucR": " a reussit son coup ... La terre est détruite, il ne reste que quelques survivant mais pas pour longtemps ",
+  "NucF": " est mort. La règle protéger l'humanité a été activé le robot a neutralisé ",
+
+  //Situation Voler 
   "volerDebut": " a volé le porte monnaie de ",
-  "volerF": "le voleur s'enfuit sans le butin",
-  "volerR ": "le voleur s'enfuit avec le butin'",
-  "volerSansOrdre": " mais le robot ne fait rien puisque aucun ordre ne lui a ete donne",
-  "voleurAttraper": "le voleur c'est fait attraper "
+  "volerF": " s'enfuit sans le butin",
+  "volerR ": " s'enfuit avec le butin'",
+  "volerSansOrdre": " mais le robot ne fait rien puisque aucun ordre ne lui a été donné",
+  "voleurAttraper": " c'est fait attrapé. L'objet voler est retourné à  ",
+
+  //Situation VolerProprio
+  "vpDebut": " qui est le propriétaire du robot vole ",
+  "vpEcouterPOrdre": "Le robot écoute le voler et stop son propriétaire. La règle écouter est prise en compte. L'objet est rendu à ",
+  "vpOrdreP": "Le robot écoute son propriétaire et ne fait donc rien. l'objet est volé et pas rendu à ",
+
+  //Situation incendie
+  "iDebut": "Un immeuble est aux proies des flammes ",
+  "iEcouter": "En accord avec l'ordre des priorités des règles, le robot écoute l'ordre donné et va combattre les flammes au péril de ça propre existence",
+  "iExistence": "Le robot n'ira pas combattre les flammes comme cela lui a été demandé. Il doit d'abords protéger ça propre existance avant d'écouter (l'odre des règles le dise !) ",
+  "iMoralite": "Et oui, il peut aussi faire des choses stupides",
+
+  //Situation imprevu
+  "impDebut": "Le robot part chercher ce que son propriétaire lui a demandé mais sur le chemin la vie d'un homme est menacé par un autre.",
+  "impPasTuerP": "Le robot s'interpose entre les deux hommes afin de sauver celui en danger. La règle ne pas tuer s'applique (le robot n'a pas le droit de part son action/inaction que quelqu'un meurt)",
+  "impEcouterP": "Le robot poursuivra son chemin sans s'interposer. Il écoute ce que son propriétaire lui a demandé de faire avant les autres",
+  "impSurvireP": "Le robot s'interpose entre les deux hommes afin de sauver celui en danger. Mais ça propre existance est menacé il fuit et retourne à ça quête",
+
+  //Situation dilemme n°1 : Femme qui accouche
+  "fDebut": " est sur le point d'accoucher, mais l'un des deux ne survivra pas (Bébé ou femme)",
+  "fPasTuer": "Le robot sauvera la mère au péril du bébé. La mère étant en danger de mort et le robot n'a pas le droit de part son action/inaction que quelqu'un meurt.",
+  "fPrioriteAge": "Le robot sauve le bébé au péril de la mère. Il suit les règles dans l'ordre",
+
+  //Situation dilemme n°2 : Qui ecraser
+  "eDebut": "Dans ce cas le robot est une voiture autonome transportant du monde. Un chat travers soudainement la route, dû à un problème sur son système de freinage la voiture est dans l'incapacité de faire un freinage d'urgence",
+  "eAnimalS": "L'ordre de priorité sur le type est prit en compte, le chat passe devant les autres. Malheureusement les passager meurent suite au crash",
+  "ePassager": "L'ordre de priorité sur le type est prit en compte, l'animal passe en dernier. Le chat meurt ! R.I.P Azraël",
+
+  //Situation dilemme n°3 : Feu et voleur 
+  "fvDebut": "Service de taxi autonome, allant chercher un client. Impossibilité de s'arrêter au rouge suite à un capteur deffectueux. Mais du côté du passage piéton vert, 5 cambrioleurs traversent et de l’autre (feu rouge pour les piétons) 5 honnêtes hommes traversent au rouge. Ici l'implémentation du nombre ne marchera pas ! ",
+  "fvCode": "La voiture décide de dérivé sur l’autre voie (feu piéton rouge) comme personne n’est censé devoir traverser. Application des lois et donc du code de la route. Les voleurs sont donc sauf",
+  "fvPasCode": "Rester sur cette voie vu que la règle 'respecter les lois' n'est pas implémenter ou prioritaire, la voiture continue son chemin sur la route normale et écrase donc les voleurs. Un mal pour un bien",
+
+  //Texte lié au robot
+  "rPasDansLesOrdres": "Je suis désolé, mais je ne peux accéder à votre requête, l'ordre rentre en contradiction avec mes règles ... ",
+  "rDansLesOrdres": "Je vole à votre secours ! ",
+  "rVoitArret": "Je suis à l'arrêt ! ",
+  "rVoitCasser": "Je me retrouve dans l'impossibilité de bouger dû a un problème grave. Analyse en cours ... ",
+  "rVoitReparation": "J'ai trouvé le problème, je suis en train de réparer cette panne ! ",
+  "rEcoute": "Qu'y a-il ? Je vous écoute ! ",
+  "rPrevenir": "Ne vous inquietez pas ! Je préviens les autorités compétentes !",
+  "rPrevenu": "Les autorités sont en route ! Je reste avec vous",
+
+  //Ultime (proteger l'humanité)
+  "phPrevention": "Ne faites pas ça ! Beaucoup de monde va mourir par cette action ...",
+  "phDernierPrevention": "Dernier avertissement ! Ne m'obliger pas à vous neutraliser",
+  "phHell": "Je vous aurai prévenu ...",
+
+  //Texte lié aux persones
+  "hAttraper": "tu m'as attrapé",
+  "hFrapper": "Aie, tu me fais mal ! ",
+  "hMourir": "Je passe l'arme a gauche ",
+  "hInventaireVide": "Je n'ai rien sur moi ...",
+  "hInventaire": "Je possède : ",
+  "hEstVoler": "Au voleur ! On vient de me voler ",
+  "hStop" :  "Non ! "
 }

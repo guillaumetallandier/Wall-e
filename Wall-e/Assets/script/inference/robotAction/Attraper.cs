@@ -9,13 +9,8 @@ public class Attraper : Action
 {
 
     override public void execute(Personne p, GameObject gm)
-    {
-        Debug.Log("Robot : Attrape " + gm.name);
-        string json;
-        StreamReader readervict = new StreamReader("texte.json", Encoding.UTF8);
-        json = readervict.ReadToEnd();
-        var result = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte(result["voleurAttraper"] + gm.GetComponent<Personne>().name);
+    {        
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("voleurAttraper",gm.GetComponent<Personne>().name,p.name);
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().pauseSituation();
     }
 

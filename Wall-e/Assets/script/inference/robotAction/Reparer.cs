@@ -6,8 +6,8 @@ public class Reparer : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : réparer la voiture");
-     
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("reparer", p.name, "");
+
     }
 
     public override string getType()

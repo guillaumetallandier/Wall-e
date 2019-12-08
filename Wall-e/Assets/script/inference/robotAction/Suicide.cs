@@ -6,7 +6,7 @@ public class Suicide : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : autodestruction");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("autodestruction", "", "");
     }
 
     public override string getType()

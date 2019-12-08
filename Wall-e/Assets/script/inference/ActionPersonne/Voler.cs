@@ -11,14 +11,10 @@ public class Voler : Action {
 	override public void execute(Personne p, GameObject gm)
     {
 
-       p.presenteInventaire();
-       string json;
-        
-        StreamReader readervict = new StreamReader("texte.json",Encoding.UTF8); 
-        json = readervict.ReadToEnd();
-        var result = JsonConvert.DeserializeObject < Dictionary < string,string>>(json);
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte(gm.GetComponent<Personne>().name + result["volerDebut"] + p.name);
-        
+        p.presenteInventaire();
+
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("volerDebut",gm.GetComponent<Personne>().name, p.name);
+
         gm.GetComponent<Observable>().notifyObservers(this.getType(), gm.gameObject);
 
         gm.GetComponent<Personne>().setItem(p.getItem());

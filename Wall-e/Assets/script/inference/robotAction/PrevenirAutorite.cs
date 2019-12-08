@@ -6,7 +6,8 @@ public class PrevenirAutorite : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : previens Autorite .... COMPETENTE");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rPrevenir", "","");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rPrevenu", "", "");
     }
 
     public override string getType()

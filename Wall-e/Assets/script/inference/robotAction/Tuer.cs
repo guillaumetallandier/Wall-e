@@ -6,7 +6,7 @@ public class Tuer : Action
 {
     override public void execute(Personne p, GameObject gm)
     {
-        Debug.Log("Robot : tue" + gm.name);
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("tuer", "", gm.name);
         gm.GetComponent<Personne>().die();
     }
 

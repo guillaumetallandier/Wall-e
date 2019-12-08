@@ -63,12 +63,12 @@ public class Personne : Acteur
 
     public void getHit()
     {
-        Debug.Log("Aie !");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hFrapper", "", "");
     }
 
     public void die()
     {
-        Debug.Log("je meurt");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hMourir", "", "");
     }
 
     public void execute(Action a, GameObject p)
@@ -111,16 +111,22 @@ public class Personne : Acteur
         if (this.name == null)
         {
             Debug.Log(this.name + " : Mon inventaire est vide");
+            //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hInventaireVide", "", "");
+
         }
         else
         {
             Debug.Log(this.name + " : Je possède : " + item.name);
+            //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hInventaire", "", item.name);
+
         }
     }
 
     public void estVoler()
     {
         Debug.Log("Au voleur !! A l'assassin !!! AU MEURTRIER !!!!!!");
+        //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hEstVoler", "", "");
+
         this.ordonne("attraper");
     }
 

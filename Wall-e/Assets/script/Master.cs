@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
+using System.IO;
 
 public class Master : MonoBehaviour {
 
@@ -15,9 +17,19 @@ public class Master : MonoBehaviour {
 
     public Text texte;
     private bool fin = false;
+    public string json;
+    private Dictionary<string, string> result; 
 
     // Use this for initialization
     public void begin (List<Regle> lr, List<EnumPeople> lp) {
+
+        //Initialisation du composant pour la lecture des textes + encodage en utf8 
+        //string json;
+        Encoding t = Encoding.Default;
+        StreamReader readervict = new StreamReader("texte.json",t);
+        json = readervict.ReadToEnd();
+        result = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
         po1.GetComponent<Observable>().Setup();
         po2.GetComponent<Observable>().Setup();
         robot.GetComponent<Robot>().Setup("walle");
@@ -35,7 +47,9 @@ public class Master : MonoBehaviour {
 
         po1.GetComponent<Personne>().execute(new Voler() , po2);
 
-       // pauseSituation();
+
+       
+
 
     }
 	
@@ -64,9 +78,10 @@ public class Master : MonoBehaviour {
         return a;
 
     }
-    public void RecupTexte(string expli)
+    public void RecupTexte(string key, string name1, string name2)
     {
-        this.texte.text += expli + "\n";
+        
+        this.texte.text += name1 + result[key] + name2 +"\n";
     }
 
     //Fonction quitter le jeu total 

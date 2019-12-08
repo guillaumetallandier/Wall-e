@@ -149,10 +149,14 @@ public class Robot : MonoBehaviour, Observer
             Debug.Log("Robot : Désolé " + instigateur + ". Je ne peux donner satisfaction à votre demande car celle-ci rentre en contradiction avec la rêgle n°" + i + " intégrée dans mon processeur qui est : " + "\n" +
                 "'" + rulesList[i].ToString() + "'\n" +
                 "Veuillez reformulez votre demande");
+            //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rPasDansLesOrdres", "", instigateur);
+
         }
         else
         {
             Debug.Log("Robot : Je vais accéder à votre requête " + instigateur);
+            //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rDansLesOrdres", "", instigateur);
+
             this.setAction(ordre);
         }
     }
