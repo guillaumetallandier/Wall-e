@@ -32,7 +32,7 @@
 
     {
       "id": 5,
-      "tag": "Tuer",
+      "tag": "tuer",
       "description": "Doit tuer"
     },
 
@@ -44,7 +44,7 @@
 
     {
       "id": 7,
-      "tag": "respecter la loi",
+      "tag": "respecterLaLoi",
       "description": "Respecter la loi mise en place par l'état"
     },
 

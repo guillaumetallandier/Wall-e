@@ -17,7 +17,7 @@ public class ActionInstanciation : Action
     }
 
 
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
 
     }

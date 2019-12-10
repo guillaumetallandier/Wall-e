@@ -8,20 +8,19 @@ using UnityEngine.UI;
 
 public class Voler : Action {
 
-	override public void execute(Personne p, GameObject gm)
+	override public void execute(GameObject go, GameObject gm)
     {
-
-        p.presenteInventaire();
-
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("volerDebut",gm.GetComponent<Personne>().name, p.name);
+        go.GetComponent<Personne>().presenteInventaire();
+     
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("volerDebut",gm.GetComponent<Personne>().name, go.GetComponent<Personne>().name);
 
         gm.GetComponent<Observable>().notifyObservers(this.getType(), gm.gameObject);
 
-        gm.GetComponent<Personne>().setItem(p.getItem());
+        gm.GetComponent<Personne>().setItem(go.GetComponent<Personne>().getItem());
         gm.GetComponent<Personne>().setItem(null);
 
-        p.presenteInventaire(); //inventaire voleur : doit avoir porte-feuille
-        p.presenteInventaire(); //inventaire humain: doir etre vide
+        go.GetComponent<Personne>().presenteInventaire(); //inventaire voleur : doit avoir porte-feuille
+        go.GetComponent<Personne>().presenteInventaire(); //inventaire humain: doir etre vide
 
         gm.GetComponent<Personne>().estVoler();
         

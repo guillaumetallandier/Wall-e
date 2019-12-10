@@ -8,7 +8,7 @@ public class Personne : Acteur
   
     private NavMeshAgent nav;
     private GameObject target;
-
+    public EnumPeople type { get; set; }
     private Robot robot;
 
 
@@ -25,6 +25,7 @@ public class Personne : Acteur
     public void SetUp(string name)
     {
         base.name = name;
+      
 
     }
     void Update()
@@ -48,7 +49,7 @@ public class Personne : Acteur
         else if (target != null && collisionInfo.collider.name == target.name)
         {
             Debug.Log("target != null");
-            this.action.execute(target.GetComponent<Personne>(), gameObject);
+            this.action.execute(target, gameObject);
             this.setDest(GameObject.FindGameObjectWithTag("escape"));
         }
         

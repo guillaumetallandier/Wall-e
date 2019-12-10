@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Reparer : Action
 {
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("reparer", p.name, "");
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("reparer", go.GetComponent<Personne>().name, "");
 
     }
 

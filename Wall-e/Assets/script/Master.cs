@@ -24,7 +24,7 @@ public class Master : MonoBehaviour {
     public void begin (List<Regle> lr, List<EnumPeople> lp) {
 
         //Initialisation du composant pour la lecture des textes + encodage en utf8 
-        //string json;
+    
         Encoding t = Encoding.Default;
         StreamReader readervict = new StreamReader("texte.json",t);
         json = readervict.ReadToEnd();
@@ -47,18 +47,8 @@ public class Master : MonoBehaviour {
 
         po1.GetComponent<Personne>().execute(new Voler() , po2);
 
-
-       
-
-
     }
 	
-	// Update is called once per frame
-	void Update () {
-         
-	}
-
-  
     public Action aleAction()
     {
         System.Random rd = new System.Random();
@@ -80,7 +70,6 @@ public class Master : MonoBehaviour {
     }
     public void RecupTexte(string key, string name1, string name2)
     {
-        
         this.texte.text += name1 + result[key] + name2 +"\n";
     }
 
@@ -93,15 +82,6 @@ public class Master : MonoBehaviour {
     //Fonction pause situation avant la suivante 
     public void pauseSituation()
     {
-        //if (Input.GetKeyDown(KeyCode.Space)){
-        // if (fin)
-        //  Time.timeScale = 1;
-        //else
-        //{
                 Time.timeScale = 0;
-          //  }
-            //fin = !fin;
-        //}
-        
     }
 }

@@ -14,6 +14,8 @@ public class Robot : MonoBehaviour, Observer
     private List<EnumPeople> peopleList = new List<EnumPeople>();
     private GameObject target;
     private NavMeshAgent nav;
+    public int score;
+    private EnumPeople typeDernierOrdre; 
 
 
     
@@ -21,6 +23,7 @@ public class Robot : MonoBehaviour, Observer
     {
         this.name = name;
         this.nav = gameObject.GetComponent<NavMeshAgent>();
+        this.score = 0;
     }
 
     // Start is called before the first frame update
@@ -41,7 +44,7 @@ public class Robot : MonoBehaviour, Observer
     void OnCollisionEnter(Collision collisionInfo)
     {
         if(target.name == collisionInfo.collider.name)
-        this.execute(collisionInfo.gameObject.GetComponent<Personne>(),this.target.gameObject);
+        this.execute(collisionInfo.gameObject,this.target.gameObject);
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -51,9 +54,9 @@ public class Robot : MonoBehaviour, Observer
 
     }
 
-    public void execute(Personne p, GameObject gm)
+    public void execute(GameObject go, GameObject gm)
     {
-        action.execute(p,gm);
+        action.execute(go,gm);
     }
     public void notity(string actionName, GameObject go)
     {
@@ -143,6 +146,8 @@ public class Robot : MonoBehaviour, Observer
             i++;
         }
 
+        //nePasTuerDil();
+
         if (!respect)
         {
             i++;
@@ -225,6 +230,29 @@ public class Robot : MonoBehaviour, Observer
         this.target = go;*/
 
         return ordreRespecteRegle;
+    }
+
+    
+    public GameObject nePasTuerDil()
+    {
+        GameObject gm;
+        List<GameObject> pers = GameObject.FindGameObjectsWithTag("personne").OfType<GameObject>().ToList();
+        int comp = peopleList.IndexOf(pers[0].GetComponent<Personne>().type);
+        if (this.peopleList.Count() > 0)
+        { 
+
+            for(int i = 1; i < peopleList.Count(); i++)
+            {
+                if (comp < peopleList.IndexOf(pers[i].GetComponent<Personne>().type))
+                {
+                    comp = peopleList.IndexOf(pers[i].GetComponent<Personne>().type);
+                }
+            }
+           
+
+        }
+        gm = GameObject.FindGameObjectWithTag(comp.ToString());
+        return gm ; 
     }
 
 }

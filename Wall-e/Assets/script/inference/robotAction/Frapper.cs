@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Frapper : Action
 {
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
         Debug.Log("Robot : frappe" + gm.name);
         gm.GetComponent<Personne>().getHit();

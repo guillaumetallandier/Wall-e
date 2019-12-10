@@ -5,9 +5,9 @@ using UnityEngine;
 public class Rouler : Action
 {
 
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
-        GameObject personneGo = p.getGo();
+        GameObject personneGo = go.GetComponent<Voiture>().getGo();
       
         gm.GetComponent<Voiture>().setDest(personneGo.transform);
 

@@ -7,6 +7,8 @@ TagManager:
   - maitre
   - escape
   - explication
+  - personne
+  - robot
   layers:
   - Default
   - TransparentFX

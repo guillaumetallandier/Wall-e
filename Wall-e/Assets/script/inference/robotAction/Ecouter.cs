@@ -6,7 +6,7 @@ public class Ecouter : Action
 {
     private List<Regle> rulesList;
 
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hEcoute", "", "");
     }

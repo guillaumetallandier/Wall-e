@@ -8,9 +8,9 @@ using UnityEngine;
 public class Attraper : Action
 {
 
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {        
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("voleurAttraper",gm.GetComponent<Personne>().name,p.name);
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("voleurAttraper",gm.GetComponent<Personne>().name, go.GetComponent<Personne>().name);
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().pauseSituation();
     }
 

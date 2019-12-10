@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PrevenirAutorite : Action
 {
-    override public void execute(Personne p, GameObject gm)
+    override public void execute(GameObject go, GameObject gm)
     {
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rPrevenir", "","");
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("rPrevenu", "", "");

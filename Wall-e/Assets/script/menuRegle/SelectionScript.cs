@@ -30,6 +30,7 @@ public class SelectionScript : MonoBehaviour
     public Transform contentPanel;
     public GameObject type1;
     public GameObject type2;
+    public List<string> memo = new List<string>();
 
     // Start is called before the first frame update
 
@@ -54,28 +55,43 @@ public class SelectionScript : MonoBehaviour
 
     public void spawnRule(OptionRule ruleType)
     {
+        
         GameObject spawnedGameObject;
         switch (ruleType.getValue().getTag())
         {
 
-            case "tuer":
-                Debug.Log(ruleType.getValue().getTag());
+            case "nePasTuer":
+                //Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
                 spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
                 Destroy(gameObject);
 
                 break;
 
-            case "nePasTuer":
+            case "nePasBlesser":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
                 spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "nePasEtreDetruit":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
                 Destroy(gameObject);
 
                 break;
@@ -87,12 +103,100 @@ public class SelectionScript : MonoBehaviour
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
                 Destroy(gameObject);
 
                 break;
 
-            default :
+            case "tuer":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
                 break;
+
+            case "etreDetruit":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "respecterLaLoi":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "ProtegerHumanite":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "agirCrime":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "agirAccident":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "aucune" :
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+
+                break;
+
+            default:
+                break; 
+
+            
+
+            
         }
     }
 }
