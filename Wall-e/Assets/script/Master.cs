@@ -11,7 +11,7 @@ public class Master : MonoBehaviour {
     public GameObject po1; //voleur
     public GameObject po2; //humain
     public GameObject robot;
-    public Item i; 
+   // public Item i; 
 
     public GameObject GO_item;
     public GameObject ITEM_item;
@@ -33,8 +33,8 @@ public class Master : MonoBehaviour {
 
        // i.setUp("blabla", po1);
 
-
         Ramasser d = new Ramasser(i);
+
 
         po1.GetComponent<Observable>().Setup();
         po2.GetComponent<Observable>().Setup();
@@ -53,7 +53,9 @@ public class Master : MonoBehaviour {
 
         po1.GetComponent<Personne>().execute(new Voler() , po2);
 
+
         //po1.GetComponent<Personne>().ordonne(new Ramasser(d), robot); 
+
 
     }
 	

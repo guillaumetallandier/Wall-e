@@ -10,10 +10,9 @@ public class Ramasser : Action {
 
 
     public Ramasser(Item i)
-    {
-       
-        this.s = i;
 
+    {
+        this.s = i;
     }
     override public void execute(GameObject go, GameObject gm)
     {

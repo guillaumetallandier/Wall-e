@@ -28,6 +28,7 @@ public class RulesPanelScript : MonoBehaviour
     {
         List<Regle> listeRegle = new List<Regle>();
 
+
         foreach(RuleScript rl in gameObject.GetComponentsInChildren<RuleScript>())
         {
             listeRegle.Add(rl.getRegle());
@@ -35,6 +36,14 @@ public class RulesPanelScript : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().begin(listeRegle, this.peopleList);
         gameObject.SetActive(false);
+
+        foreach(ParOrdreScript s1 in gameObject.GetComponentsInChildren<ParOrdreScript>())
+        {
+            peopleList.Add(((OptionPeople)s1.first.options[s1.first.value]).getValue());
+            peopleList.Add(((OptionPeople)s1.second.options[s1.second.value]).getValue());
+            peopleList.Add(((OptionPeople)s1.third.options[s1.third.value]).getValue());
+            peopleList.Add(((OptionPeople)s1.forth.options[s1.forth.value]).getValue());
+        }
 
     }
 }
