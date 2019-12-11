@@ -34,3 +34,7 @@ Wall-e a pour but de comprendre la complexité et les limites des lois encadrant
 - [TALLANDIER GUILLAUME](https://git.unistra.fr/tallandier)
 - [PFEIFFER AURELIEN](https://git.unistra.fr/pfeiffera)
 - [MARCHAL BENJAMIN](https://git.unistra.fr/benjamin.marchal)
+- 
+
+#### Développement 
+Unity, C# 
