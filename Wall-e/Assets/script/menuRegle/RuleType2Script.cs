@@ -29,7 +29,8 @@ public class RuleType2Script : RuleScript
         dd.options.Add(new Dropdown.OptionData(){ text = "aucun" });
         dd.options.Add(new Dropdown.OptionData() { text = "Proprietaire" });
         dd.options.Add(new Dropdown.OptionData() { text = "Par ordre" });
-        dd.options.Add(new Dropdown.OptionData() { text = "Par ordre de dangerosite" });
+        dd.options.Add(new Dropdown.OptionData() { text = "Par nombre" });
+       
         dd.onValueChanged.AddListener(delegate
         {
             listen(dd.options[dd.value].text);
@@ -54,6 +55,12 @@ public class RuleType2Script : RuleScript
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 this.son = spawnedGameObject;
                 Debug.Log(p);
+                break;
+
+            case "Par nombre":
+                Destroy(this.son);
+                this.who.Clear();
+                this.who.Add(EnumPeople.parNombre);
                 break;
 
             case "aucun":
