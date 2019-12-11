@@ -9,6 +9,7 @@ TagManager:
   - explication
   - personne
   - robot
+  - Panel_text
   layers:
   - Default
   - TransparentFX
