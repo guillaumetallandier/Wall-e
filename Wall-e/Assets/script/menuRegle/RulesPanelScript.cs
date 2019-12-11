@@ -8,11 +8,19 @@ public class RulesPanelScript : MonoBehaviour
     public Button button;
     private List<EnumPeople> peopleList = new List<EnumPeople>();
 
+
+   
     private void Start()
     {
+        GameObject panel;
+        panel= GameObject.FindGameObjectWithTag("Panel_text");
+        panel.SetActive(false);
+
         this.button.onClick.AddListener(delegate
         {
+            
             sendToRobot();
+            panel.SetActive(true);
         });
     }
 
