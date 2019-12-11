@@ -23,6 +23,7 @@ public class ParOrdreScript : MonoBehaviour
     public Dropdown second;
     public Dropdown third;
     public Dropdown forth;
+
     private List<Dropdown> ddTab = new List<Dropdown>();
 
     void Start()
@@ -31,12 +32,15 @@ public class ParOrdreScript : MonoBehaviour
         ddTab.Add(second);
         ddTab.Add(third);
         ddTab.Add(forth);
+    
         foreach (Dropdown dd in ddTab)
         {
             for (int i = 0; i < Enum.GetNames(typeof(EnumPeople)).Length; i++)
             {
                 dd.options.Add(new OptionPeople((EnumPeople)Enum.GetValues(typeof(EnumPeople)).GetValue(i)) { text = Enum.GetNames(typeof(EnumPeople))[i] }); ;
+                
             }
+           
             dd.onValueChanged.AddListener(delegate
             {
                 ordreChanged(dd);
