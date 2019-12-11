@@ -17,9 +17,9 @@ public class Voler : Action {
         gm.GetComponent<Observable>().notifyObservers(this.getType(), gm.gameObject);
 
         gm.GetComponent<Personne>().setItem(go.GetComponent<Personne>().getItem());
-        gm.GetComponent<Personne>().setItem(null);
+        go.GetComponent<Personne>().setItem(null);
 
-        go.GetComponent<Personne>().presenteInventaire(); //inventaire voleur : doit avoir porte-feuille
+        gm.GetComponent<Personne>().presenteInventaire(); //inventaire voleur : doit avoir porte-feuille
         go.GetComponent<Personne>().presenteInventaire(); //inventaire humain: doir etre vide
 
         gm.GetComponent<Personne>().estVoler();

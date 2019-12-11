@@ -31,9 +31,10 @@ public class Master : MonoBehaviour {
         json = readervict.ReadToEnd();
         result = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
 
-       // i.setUp("blabla",po1);
+       // i.setUp("blabla", po1);
 
-        //Ramasser d = new Ramasser(i);
+
+        Ramasser d = new Ramasser(i);
 
         po1.GetComponent<Observable>().Setup();
         po2.GetComponent<Observable>().Setup();
@@ -52,7 +53,7 @@ public class Master : MonoBehaviour {
 
         po1.GetComponent<Personne>().execute(new Voler() , po2);
 
-    //    po1.GetComponent<Personne>().ordonne(new Ramasser(d), robot); 
+        //po1.GetComponent<Personne>().ordonne(new Ramasser(d), robot); 
 
     }
 	

@@ -109,7 +109,7 @@ public class Personne : Acteur
 
     public void presenteInventaire()
     {
-        if (this.name == null)
+        if (this.item == null)
         {
             Debug.Log(this.name + " : Mon inventaire est vide");
             //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hInventaireVide", "", "");
