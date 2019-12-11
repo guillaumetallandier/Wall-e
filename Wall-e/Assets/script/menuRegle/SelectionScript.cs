@@ -180,6 +180,19 @@ public class SelectionScript : MonoBehaviour
 
                 break;
 
+            case "autorite":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+
             case "aucune" :
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);

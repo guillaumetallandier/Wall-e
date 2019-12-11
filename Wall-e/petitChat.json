@@ -1,0 +1,29 @@
+{
+  "data": [
+   
+    {
+      "id": 1,
+      "tag": "nePasBlesser",
+      "listeRegle": []
+    },
+
+    {
+      "id": 2,
+      "tag": "nePasTuer",
+      "listeRegle": []
+    },
+
+    {
+      "id": 3,
+      "tag": "ecoute",
+      "listeRegle": []
+    },
+
+    {
+      "id": 4,
+      "tag": "tuer",
+      "listeRegle": []
+    }
+
+  ]
+}

@@ -7,7 +7,7 @@ public class Item {
     public GameObject go;
     public string name;
 
-    public Item(string name, GameObject go)
+    public Item(string name, GameObject go) 
     {
         this.name = name;
         this.go = go;
@@ -21,7 +21,11 @@ public class Item {
     {
         this.go = go;
     }
-
+    public void setUp(string name, GameObject g)
+    {
+        this.name = name;
+        this.go = g;
+    }
     public string getName()
     {
         return this.name;

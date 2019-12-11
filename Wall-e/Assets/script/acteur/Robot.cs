@@ -15,7 +15,7 @@ public class Robot : MonoBehaviour, Observer
     private GameObject target;
     private NavMeshAgent nav;
     public int score;
-    private EnumPeople typeDernierOrdre; 
+    //private EnumPeople typeDernierOrdre; 
 
 
     
@@ -248,8 +248,6 @@ public class Robot : MonoBehaviour, Observer
                     comp = peopleList.IndexOf(pers[i].GetComponent<Personne>().type);
                 }
             }
-           
-
         }
         gm = GameObject.FindGameObjectWithTag(comp.ToString());
         return gm ; 

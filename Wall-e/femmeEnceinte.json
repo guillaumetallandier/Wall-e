@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "tag": "autorite",
+      "listeRegle": []
+    },
+
+    {
+      "id": 2,
+      "tag": "agirAccident",
+      "listeRegle": []
+    },
+
+    {
+      "id": 3,
+      "tag": "nePasBlesser",
+      "listeRegle": []
+    },
+
+    {
+      "id": 4,
+      "tag": "nePasTuer",
+      "listeRegle": []
+    },
+
+    {
+      "id": 5,
+      "tag": "ecoute",
+      "listeRegle": []
+    },
+
+    {
+      "id": 6,
+      "tag": "tuer",
+      "listeRegle": []
+    }
+
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "data": [
+
+    {
+      "id": 1,
+      "tag": "agirCrime",
+      "listeRegle": []
+    },
+
+    {
+      "id": 2,
+      "tag": "ProtegerHumainite",
+      "listeRegle": []
+    },
+
+    {
+      "id": 3,
+      "tag": "tuer",
+      "listeRegle": [ 2 ]
+    }
+
+  ]
+}
