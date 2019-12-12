@@ -127,7 +127,6 @@ public class Personne : Acteur
     {
         Debug.Log("Au voleur !! A l'assassin !!! AU MEURTRIER !!!!!!");
         //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hEstVoler", "", "");
-
         this.ordonne("attraper");
     }
 
@@ -135,5 +134,11 @@ public class Personne : Acteur
     {
         Debug.Log(ordre);
         robot.recevoirOrdre(ordre,this.name);
+    }
+
+    public void appelerSecours()
+    {
+        Debug.Log("It is fine !");
+        this.ordonne("sauver");
     }
 }

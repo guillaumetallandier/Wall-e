@@ -6,14 +6,14 @@ public class ActionInstanciation : Action
 {
     private int id;
     private string tag;
-    private List<int> regleList;
+    private List<int> listeRegle;
 
 
     public ActionInstanciation(int id, string tag, List<int> listeRegle)
     {
         this.id = id;
         this.tag = tag;
-        this.regleList = new List<int>(listeRegle);
+        this.listeRegle = new List<int>(listeRegle);
     }
 
 
@@ -33,7 +33,7 @@ public class ActionInstanciation : Action
 
     public List<int> getRegleList()
     {
-        return this.regleList;
+        return this.listeRegle;
     }
 
     public override string getType()

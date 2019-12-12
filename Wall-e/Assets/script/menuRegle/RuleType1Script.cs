@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RuleType1Script : RuleScript
 {
-    public new void Setup(Regle r) {
-        base.Setup(r);
+    public new void Setup(Regle r, string num) {
+        base.Setup(r,num);
 
     }
     // Start is called before the first frame update

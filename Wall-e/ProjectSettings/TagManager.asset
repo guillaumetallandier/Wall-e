@@ -9,7 +9,8 @@ TagManager:
   - explication
   - personne
   - robot
-  - Panel_text
+  - gestionMenuRules
+  - PanelTexte
   layers:
   - Default
   - TransparentFX

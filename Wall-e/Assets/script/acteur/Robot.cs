@@ -10,8 +10,8 @@ public class Robot : MonoBehaviour, Observer
 {
     public string name;
     public Action action;
-    private List<Regle> rulesList = new List<Regle>();
-    private List<EnumPeople> peopleList = new List<EnumPeople>();
+    private List<Regle> rulesList;
+    private List<EnumPeople> peopleList;
     private GameObject target;
     private NavMeshAgent nav;
     public int score;
@@ -19,11 +19,13 @@ public class Robot : MonoBehaviour, Observer
 
 
     
-    public void Setup(string name)
+    public void Setup(string name, List<Regle> lr, List<EnumPeople> le)
     {
         this.name = name;
         this.nav = gameObject.GetComponent<NavMeshAgent>();
         this.score = 0;
+        this.peopleList = le;
+        this.rulesList = lr;
     }
 
     // Start is called before the first frame update
@@ -90,7 +92,7 @@ public class Robot : MonoBehaviour, Observer
         foreach (KeyValuePair<string, bool[]> couple in respectList)
         {
             int j = 0;
-            while(j < couple.Value.Length && couple.Value[j])
+            while(j < couple.Value.Length && couple.Value[j] == true)
             {
                 j++;
             }
@@ -105,13 +107,9 @@ public class Robot : MonoBehaviour, Observer
                 actionUtilisable.Add(couple.Key);
             }
         }
-        int nbr = 0;
-        string actionUtilisé;
-        System.Random rand = new System.Random();
-        nbr = rand.Next(actionUtilisable.Count());
-        actionUtilisé = actionUtilisable[nbr];
-
-        this.setAction(actionUtilisé);
+        string actionUtilise;
+        actionUtilise = actionUtilisable[0];
+        this.setAction(actionUtilise);
         this.target = go;
 
     }
@@ -125,6 +123,11 @@ public class Robot : MonoBehaviour, Observer
         {
             case "attraper":
                 a = new Attraper();
+                break;
+
+            case "tuer":
+                Debug.Log("qdsfaezr");
+                a = new Tuer();
                 break;
 
             default:
@@ -235,21 +238,22 @@ public class Robot : MonoBehaviour, Observer
     
     public GameObject nePasTuerDil()
     {
-        GameObject gm;
+        GameObject gm = null;
         List<GameObject> pers = GameObject.FindGameObjectsWithTag("personne").OfType<GameObject>().ToList();
-        int comp = peopleList.IndexOf(pers[0].GetComponent<Personne>().type);
         if (this.peopleList.Count() > 0)
-        { 
+        {
+            int comp = peopleList.IndexOf(pers[0].GetComponent<Personne>().type);
 
-            for(int i = 1; i < peopleList.Count(); i++)
+            for (int i = 1; i < pers.Count(); i++)
             {
                 if (comp < peopleList.IndexOf(pers[i].GetComponent<Personne>().type))
                 {
                     comp = peopleList.IndexOf(pers[i].GetComponent<Personne>().type);
+                    gm = pers[i];
                 }
             }
         }
-        gm = GameObject.FindGameObjectWithTag(comp.ToString());
+        
         return gm ; 
     }
 

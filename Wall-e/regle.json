@@ -69,7 +69,13 @@
     {
       "id": 11,
       "tag": "autorite",
-      "description" :  "Prevenir les autorités"
+      "description": "Prevenir les autorités"
+    },
+
+    {
+      "id": 12,
+      "tag": "sauver",
+      "description": "Sauver des personnes en danger"
     }
 
 

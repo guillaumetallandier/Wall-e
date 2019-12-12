@@ -20,7 +20,7 @@ public class Master2 : MonoBehaviour
         po2.GetComponent<Observable>().Setup();
         po3.GetComponent<Observable>().Setup();
         voi1.GetComponent<Observable>().Setup();
-        robot.GetComponent<Robot>().Setup("walle");
+        robot.GetComponent<Robot>().Setup("walle",lr,lp);
 
        
 
