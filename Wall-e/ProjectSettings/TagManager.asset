@@ -12,6 +12,7 @@ TagManager:
   - gestionMenuRules
   - PanelTexte
   - btnnuc
+  - static
   layers:
   - Default
   - TransparentFX

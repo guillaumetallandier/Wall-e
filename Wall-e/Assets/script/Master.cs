@@ -8,13 +8,12 @@ using System.IO;
 
 public class Master : MonoBehaviour {
 
-    public GameObject po1; //voleur
-    public GameObject po2; //humain
-    public GameObject robot;
-   
+    //public GameObject po1; //voleur
+    //public GameObject po2; //humain
+    //public GameObject robot;
+    public List<GameObject> Scenario; 
 
-    public GameObject GO_item;
-    public GameObject ITEM_item;
+    //public GameObject GO_item;
 
     public Text texte;
     private bool fin = false;
@@ -31,8 +30,10 @@ public class Master : MonoBehaviour {
         json = readervict.ReadToEnd();
         result = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
 
-        
+        GameObject inst =  Instantiate(Scenario[0], new Vector3(-86, 0, -121),Quaternion.identity);
+        inst.GetComponent<MasterNuc>().begin(lr,lp);
 
+        /*
         po1.GetComponent<Observable>().Setup();
         po2.GetComponent<Observable>().Setup();
         robot.GetComponent<Robot>().Setup("walle",lr,lp);
@@ -48,29 +49,10 @@ public class Master : MonoBehaviour {
 
         po2.GetComponent<Personne>().setItem(new Item("porte-feuille", GO_item));
 
-        po1.GetComponent<Personne>().execute(new Voler() , po2);
+        po1.GetComponent<Personne>().execute(new Voler() , po2);*/
 
     }
 	
-    public Action aleAction()
-    {
-        System.Random rd = new System.Random();
-        int nbr = rd.Next(2);
-        Action a;
-
-        switch (nbr)
-        {
-            case 0 :
-                a = new Voler();
-                break;
-
-            default:
-                a = new Frapper();
-                break;
-        }
-        return a;
-
-    }
     public void RecupTexte(string key, string name1, string name2)
     {
         this.texte.text += name1 + result[key] + name2 +"\n";

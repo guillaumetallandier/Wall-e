@@ -11,8 +11,6 @@ public class MasterNuc : MonoBehaviour
 
     public GameObject po1; //humain 
     public GameObject robot;
-
-
     public GameObject btnnuc;
 
     // Use this for initialization
