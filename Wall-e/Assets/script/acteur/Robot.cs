@@ -71,6 +71,7 @@ public class Robot : MonoBehaviour, Observer
 
         foreach (ActionInstanciation a in result.actions)
         {
+            Debug.Log("notify : " + a.getRegleList().Count);
             bool[] respectRegle = new bool[rulesList.Count()];
             for (int i = 0; i < this.rulesList.Count(); i++)
             {
@@ -141,11 +142,11 @@ public class Robot : MonoBehaviour, Observer
     {
         bool respect = true;
         int nbRegles = rulesList.Count();
-        int i = -1;
+        int i = 0;
 
         while(respect && i < nbRegles && nbRegles != 0)
         {
-            respect = respectRegles(ordre,rulesList[i+1]);
+            respect = respectRegles(ordre,rulesList[i]);
             i++;
         }
 

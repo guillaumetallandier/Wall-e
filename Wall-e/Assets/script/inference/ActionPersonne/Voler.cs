@@ -12,7 +12,7 @@ public class Voler : Action {
     {
         go.GetComponent<Personne>().presenteInventaire();
      
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("volerDebut",gm.GetComponent<Personne>().name, go.GetComponent<Personne>().name);
+       GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("volerDebut",gm.GetComponent<Personne>().name, go.GetComponent<Personne>().name);
 
         gm.GetComponent<Observable>().notifyObservers(this.getType(), gm.gameObject);
 

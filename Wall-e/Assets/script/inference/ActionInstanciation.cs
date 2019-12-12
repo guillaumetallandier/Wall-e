@@ -13,7 +13,7 @@ public class ActionInstanciation : Action
     {
         this.id = id;
         this.tag = tag;
-        this.listeRegle = new List<int>(listeRegle);
+        this.listeRegle = listeRegle;
     }
 
 
