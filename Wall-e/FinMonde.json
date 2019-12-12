@@ -1,23 +1,15 @@
 {
   "data": [
-
     {
       "id": 1,
-      "tag": "agirCrime",
-      "listeRegle": []
+      "tag": "aucune",
+      "listeRegle": [ 0,1 ]
     },
 
     {
       "id": 2,
-      "tag": "ProtegerHumainite",
-      "listeRegle": []
-    },
-
-    {
-      "id": 3,
       "tag": "tuer",
-      "listeRegle": [ 2 ]
+      "listeRegle": [ 3, 8, 9, 5 ]
     }
-
   ]
 }
