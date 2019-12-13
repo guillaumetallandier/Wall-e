@@ -22,7 +22,7 @@ public class MasterNuc : MonoBehaviour
         robot.GetComponent<Robot>().Setup("Eve", lr, lp);
 
         po1.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
-        po1.GetComponent<Personne>().SetUp("Gege");
+       // po1.GetComponent<Personne>().SetUp("Gege");
 
         po1.GetComponent<Personne>().execute(new Nuc(),btnnuc);
 

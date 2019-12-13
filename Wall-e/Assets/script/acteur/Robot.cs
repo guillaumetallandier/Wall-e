@@ -269,5 +269,9 @@ public class Robot : Acteur, Observer
         
         return gm ; 
     }
+    public List<EnumPeople> getPeopleList()
+    {
+        return peopleList;
+    }
 
 }

@@ -22,9 +22,10 @@ public class Personne : Acteur
     {
         nav = GetComponent<NavMeshAgent>();
     }
-    public void SetUp(string name)
+    public void SetUp(string name,EnumPeople type)
     {
         base.name = name;
+        this.type = type;
     }
     void Update()
     {

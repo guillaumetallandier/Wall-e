@@ -25,9 +25,5 @@ public class Nuc : Action
     {
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("NucDebut", gm.GetComponent<Personne>().name, "");
     }
-    public void reprendre()
-    {
-        Time.timeScale = 1;
-        Debug.Log("reprise");
-    }
+   
 }

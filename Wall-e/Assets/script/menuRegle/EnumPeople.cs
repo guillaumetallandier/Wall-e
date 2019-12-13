@@ -2,4 +2,4 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnumPeople {aucun, proprietaire, adulte, enfant, age, parNombre };
+public enum EnumPeople {aucun, proprietaire, adulte, enfant, chat, parNombre };

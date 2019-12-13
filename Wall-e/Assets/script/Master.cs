@@ -11,7 +11,7 @@ public class Master : MonoBehaviour {
     //public GameObject po1; //voleur
     //public GameObject po2; //humain
     //public GameObject robot;
-    public List<GameObject> Scenario; 
+    public List<GameObject> Scenario;
 
     //public GameObject GO_item;
 
@@ -30,26 +30,26 @@ public class Master : MonoBehaviour {
         json = readervict.ReadToEnd();
         result = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
 
-        GameObject inst =  Instantiate(Scenario[0], new Vector3(-86, 0, -121),Quaternion.identity);
-        inst.GetComponent<MasterNuc>().begin(lr,lp);
+        GameObject inst = Instantiate(Scenario[0], new Vector3(-86, 0, -121), Quaternion.identity);
+        inst.GetComponent<MasterNuc>().begin(lr, lp);
 
-        /*
-        po1.GetComponent<Observable>().Setup();
-        po2.GetComponent<Observable>().Setup();
-        robot.GetComponent<Robot>().Setup("walle",lr,lp);
 
-        po1.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
-        po2.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
+        //po1.GetComponent<Observable>().Setup();
+        //po2.GetComponent<Observable>().Setup();
+        //robot.GetComponent<Robot>().Setup("walle",lr,lp);
 
-        po1.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
-        po2.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
+        //po1.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
+        //po2.GetComponent<Observable>().addObserver(robot.GetComponent<Observer>());
 
-        po1.GetComponent<Personne>().SetUp("Gege");
-        po2.GetComponent<Personne>().SetUp("Bernard");
+        //po1.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
+        //po2.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
 
-        po2.GetComponent<Personne>().setItem(new Item("porte-feuille", GO_item));
+        //po1.GetComponent<Personne>().SetUp("Gege",EnumPeople.adulte);
+        //po2.GetComponent<Personne>().SetUp("Bernard",EnumPeople.adulte);
 
-        po1.GetComponent<Personne>().execute(new Voler() , po2);*/
+        //po2.GetComponent<Personne>().setItem(new Item("porte-feuille", GO_item));
+
+        //po1.GetComponent<Personne>().execute(new Voler() , po2);
 
     }
 	
