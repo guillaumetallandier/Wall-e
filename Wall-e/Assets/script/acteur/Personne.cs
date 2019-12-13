@@ -22,11 +22,10 @@ public class Personne : Acteur
     {
         nav = GetComponent<NavMeshAgent>();
     }
-    public void SetUp(string name)
+    public void SetUp(string name,EnumPeople type)
     {
         base.name = name;
-      
-
+        this.type = type;
     }
     void Update()
     {
@@ -40,18 +39,30 @@ public class Personne : Acteur
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "escape")
+        if (collisionInfo.collider.tag.ToString() != "static")
         {
+            
+            if (collisionInfo.collider.tag == "escape")
+            {
 
-            Debug.Log(this.name + " s'est enfui");
+                Debug.Log(this.name + " s'est enfui");
+            }
+            else if (target != null && action.getType() == "FinMonde")
+            {
+                Debug.Log("contact bouton ");
+                //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().pauseSituation();
+                //Debug.Log("pause");
+                setDest(null);
+                this.action.execute(target, gameObject);
+            }
+            else if (target != null && collisionInfo.collider.name == target.name)
+            {
+                Debug.Log("target != null");
+                this.action.execute(target, gameObject);
+                this.setDest(GameObject.FindGameObjectWithTag("escape"));
+            }
         }
-
-        else if (target != null && collisionInfo.collider.name == target.name)
-        {
-            Debug.Log("target != null");
-            this.action.execute(target, gameObject);
-            this.setDest(GameObject.FindGameObjectWithTag("escape"));
-        }
+        
         
     }
    
@@ -74,8 +85,9 @@ public class Personne : Acteur
 
     public void execute(Action a, GameObject p)
     {
+        Debug.Log("execute");
         this.action = a;
-        this.setDest(p.gameObject);
+        this.setDest(p);
     }
 
     public GameObject getGo()
@@ -91,6 +103,7 @@ public class Personne : Acteur
     public void setDest(GameObject target)
     {
         this.target = target;
+        Debug.Log("setDest");
     }
 
     public Item getItem()

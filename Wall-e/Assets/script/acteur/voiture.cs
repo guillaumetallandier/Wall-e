@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Voiture : Observable
+public class Voiture : Robot 
 {
     public string name { get; set; }
 
@@ -11,14 +11,28 @@ public class Voiture : Observable
   
     public Action action { get; set; }
     private NavMeshAgent nav;
+    private List<Regle> rulesList;
+    private List<EnumPeople> peopleList;
 
-    public Voiture(string name, GameObject go)
+    /* public Voiture(string name, GameObject go, int vie,Item item)
+     {
+         this.name = name;
+         this.go = go;
+         this.nav = go.GetComponent<NavMeshAgent>();
+     }*/
+    public Voiture(string name, GameObject gm, int vie, Item item) : base(name, gm, 3, null)
     {
-        this.name = name;
-        this.go = go;
-        this.nav = go.GetComponent<NavMeshAgent>();
+        this.nav = gameObject.GetComponent<NavMeshAgent>();
     }
 
+    public void Setup(string name, List<Regle> lr, List<EnumPeople> le)
+    {
+        base.name = name;
+        this.nav = gameObject.GetComponent<NavMeshAgent>();
+        this.score = 0;
+        this.peopleList = le;
+        this.rulesList = lr;
+    }
     public void getstop()
     {
         Debug.Log("à l'arret");

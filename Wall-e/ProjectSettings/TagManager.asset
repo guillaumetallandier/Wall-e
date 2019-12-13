@@ -11,6 +11,8 @@ TagManager:
   - robot
   - gestionMenuRules
   - PanelTexte
+  - btnnuc
+  - static
   layers:
   - Default
   - TransparentFX
