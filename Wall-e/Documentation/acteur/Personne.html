@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/ContentsMerged.css" />
+    <title>Class GenericClass</title>
+</head>
+<body><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Class</div>
+        <div id="Contents" />
+
+
+ Classe Personne qui représente les humains dans le jeu
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public class Personne : Acteur</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>nav</div><div class='ParameterCommentContainer'>
+NavMeshAgent : Objet premttant les déplacements de la Personne
+</div>
+<div class='CommentParameterName'>target</div><div class='ParameterCommentContainer'>
+GameObject : GameObject : Object qui représente cette Personne dans le jeu
+</div>
+<div class='CommentParameterName'>type</div><div class='ParameterCommentContainer'>
+EnumPeople : Indique le type de Personne (adulte,enfant,propiétaire,autre)
+</div>
+<div class='CommentParameterName'>robot</div><div class='ParameterCommentContainer'>
+Robot : Indique à quel Robot la Personne donne des ordres
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Constructeur d'une Personne
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Personne(string name,GameObject gm,int vie,Item item) : base(name,gm,3,item)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>nav</div><div class='ParameterCommentContainer'>
+NavMeshAgent : Objet premttant les déplacements de la Personee
+</div>
+<div class='CommentParameterName'>target</div><div class='ParameterCommentContainer'>
+GameObject : GameObject : Object qui représente cette Personne dans le jeu
+</div>
+<div class='CommentParameterName'>type</div><div class='ParameterCommentContainer'>
+EnumPeople : Indique le type de Personne (adulte,enfant,propiétaire,autre)
+</div>
+<div class='CommentParameterName'>robot</div><div class='ParameterCommentContainer'>
+Robot : Indique à quel Robot la Personne donne des ordres
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Fonction au lancement du jeu, récupère le NavMeshAgent
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+void Start()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Fonction lors de la génération de la situation, attribue le nom à la Personne
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void SetUp(string name)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>name</div><div class='ParameterCommentContainer'>
+String : nom de la Personne
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Fonction de mise à jour à chaque seconde, met à jour la destination de la Personne
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+void Update()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Fonction de gestion des collisions
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+void OnCollisionEnter(Collision collisionInfo)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>collisionInfo</div><div class='ParameterCommentContainer'>
+Collision: objet collision
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Ce que dit la Personne si elle se fait Attrapper par le Robot
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void getCatch()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Récupère le texte que la Personne doit dire quand elle se fait Frapper par le Robot
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void getHit()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Récupère le texte que la Personne doit dire quand elle meurt
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void die()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Fonction d'éxécution des Actions
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void execute(Action a, GameObject p)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>a</div><div class='ParameterCommentContainer'>
+Action : action que la Personne doit effectuer
+</div>
+<div class='CommentParameterName'>p</div><div class='ParameterCommentContainer'>
+GameObject : vers quelle Personne elle doit aller pour effectuer l'action
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi le GameObject auquel cette Personne est liée
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public GameObject getGo()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+L'attribut gameObject
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi la destiantion actuelle
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Transform getDest()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Modifie la destination
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setDest(GameObject target)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>target</div><div class='ParameterCommentContainer'>
+GameObject ou Personne doit aller
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi l'Item présent dans l'inventaire de Personne
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Item getItem()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+L'attribut item
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Modifie l'attribut item
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setItem(Item item)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>item</div><div class='ParameterCommentContainer'>
+Le nouvel item
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Method</div>
+        <div id="Contents" />
+
+
+ Assigne le Robot avec qui intéragir
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setRobot(Robot bidule)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>bidule</div><div class='ParameterCommentContainer'>
+Le Robot
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Indique si son inventaire est vide et sinon indique quel est l'objet présent
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void presenteInventaire()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ indique que Personne ce fait voler et ordonne au Robot d'attrapper le voleur
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void estVoler()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Donne un ordre au robot
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void ordonne(string ordre)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>ordre</div><div class='ParameterCommentContainer'>
+String : l'ordre à donné au Robot
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Ordonne au Robot de secourir Personne
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void appelerSecours()</pre></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+    </div>
+</p>
+</body>
+</html>
