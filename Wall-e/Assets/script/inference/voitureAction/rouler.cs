@@ -7,9 +7,9 @@ public class Rouler : Action
 
     override public void execute(GameObject go, GameObject gm)
     {
-        GameObject personneGo = go.GetComponent<Voiture>().getGo();
+        GameObject personneGo = go.GetComponent<voiture>().getGo();
       
-        gm.GetComponent<Voiture>().setDest(personneGo.transform);
+        gm.GetComponent<voiture>().setDest(personneGo.transform);
 
     }
 

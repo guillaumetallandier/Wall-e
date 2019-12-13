@@ -6,9 +6,9 @@ public class Tuer : Action
 {
     override public void execute(GameObject gop, GameObject gm)
     {
-        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("tuer", "", gm.name);
-        GameObject.FindGameObjectWithTag("robot").GetComponent<Robot>().nePasTuerDil();
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("tuer", gop.GetComponent<Robot>().name, gm.GetComponent<Personne>().name);
         gm.GetComponent<Personne>().die();
+        GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().pauseSituation();
     }
 
     public override string getType()

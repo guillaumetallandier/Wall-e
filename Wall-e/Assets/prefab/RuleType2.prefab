@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 222331056838027604}
   - component: {fileID: 114831287071145676}
   - component: {fileID: 114305374369502648}
+  - component: {fileID: 114686533476727830}
   m_Layer: 5
   m_Name: RuleType2
   m_TagString: Untagged
@@ -551,6 +552,7 @@ MonoBehaviour:
   regleLabel: {fileID: 114806143988332872}
   button: {fileID: 114937293976935556}
   selection: {fileID: 1491366040128800, guid: 99f1e8d5e1ba9ef408ee275a3deb9b90, type: 2}
+  pos: {fileID: 0}
   dd: {fileID: 114717955450466926}
   ParOrdre: {fileID: 1179154583574602, guid: 0000477d10e951940aaba0fa7a4befca, type: 2}
 --- !u!114 &114343618423498654
@@ -721,6 +723,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114686533476727830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1794853103821112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 142
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &114717955450466926
 MonoBehaviour:
   m_ObjectHideFlags: 1

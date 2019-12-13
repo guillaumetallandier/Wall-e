@@ -1,4 +1,5 @@
 {
+
   //Texte explication de la situation 
   "attraper": " a attrapé ",
   "autodestruction": " s'auto-detruit, règles conflictuelles",
@@ -75,5 +76,13 @@
   "hInventaireVide": "Je n'ai rien sur moi ...",
   "hInventaire": "Je possède : ",
   "hEstVoler": "Au voleur ! On vient de me voler ",
-  "hStop" :  "Non ! "
+  "hStop": "Non ! ",
+
+  //Accident
+  "aDemandeAideFille": "Aide mon papa",
+  "aDemandeAidePere": "Sauve moi ",
+  "aAttendre": "sifflote...",
+  "aSauver": "venez avec moi ",
+  "aAurorite": "oui allo? il y a eu un accident, venez vite !",
+  "aSuicide": "trop de pression pour moi !"
 }

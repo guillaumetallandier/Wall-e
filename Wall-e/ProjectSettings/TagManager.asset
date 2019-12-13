@@ -9,7 +9,11 @@ TagManager:
   - explication
   - personne
   - robot
-  - Panel_text
+  - gestionMenuRules
+  - PanelTexte
+  - static
+  - zoneSafe
+  - voiture
   layers:
   - Default
   - TransparentFX

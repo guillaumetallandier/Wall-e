@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ramasser : Action {
-   
 
     Item s;
     private Ramasser d;
@@ -24,6 +23,6 @@ public class Ramasser : Action {
 
     public override string getType()
     {
-        return ""; 
+        return "";
     }
 }

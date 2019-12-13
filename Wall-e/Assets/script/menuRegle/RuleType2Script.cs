@@ -10,9 +10,9 @@ public class RuleType2Script : RuleScript
     public GameObject ParOrdre;
     private List<EnumPeople> who = new List<EnumPeople>();
     private GameObject son;
-    public new void Setup(Regle r)
+    public new void Setup(Regle r, string num)
     {
-        base.Setup(r);
+        base.Setup(r, num);
     }
 
     // Start is called before the first frame update
@@ -30,7 +30,6 @@ public class RuleType2Script : RuleScript
         dd.options.Add(new Dropdown.OptionData() { text = "Proprietaire" });
         dd.options.Add(new Dropdown.OptionData() { text = "Par ordre" });
         dd.options.Add(new Dropdown.OptionData() { text = "Par nombre" });
-       
         dd.onValueChanged.AddListener(delegate
         {
             listen(dd.options[dd.value].text);

@@ -26,13 +26,20 @@ public class OptionRule : Dropdown.OptionData
 public class SelectionScript : MonoBehaviour
 {
     public Text rule;
+    public Text num;
     public Dropdown dd;
     public Transform contentPanel;
     public GameObject type1;
     public GameObject type2;
     public List<string> memo = new List<string>();
+    
 
     // Start is called before the first frame update
+
+    public void Setup(int num)
+    {
+        this.num.text = num.ToString();
+    }
 
     void Start()
     {
@@ -63,7 +70,7 @@ public class SelectionScript : MonoBehaviour
             case "nePasTuer":
                 //Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type2);
-                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue(), this.num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -75,7 +82,7 @@ public class SelectionScript : MonoBehaviour
             case "nePasBlesser":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type2);
-                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue(),this.num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -87,7 +94,7 @@ public class SelectionScript : MonoBehaviour
             case "nePasEtreDetruit":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), this.num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -99,7 +106,7 @@ public class SelectionScript : MonoBehaviour
             case "ecoute":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type2);
-                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType2Script>().Setup(ruleType.getValue(), this.num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -111,7 +118,7 @@ public class SelectionScript : MonoBehaviour
             case "tuer":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -123,7 +130,7 @@ public class SelectionScript : MonoBehaviour
             case "etreDetruit":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -135,7 +142,7 @@ public class SelectionScript : MonoBehaviour
             case "respecterLaLoi":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -147,7 +154,7 @@ public class SelectionScript : MonoBehaviour
             case "ProtegerHumanite":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -159,7 +166,7 @@ public class SelectionScript : MonoBehaviour
             case "agirCrime":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -171,7 +178,7 @@ public class SelectionScript : MonoBehaviour
             case "agirAccident":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -183,7 +190,19 @@ public class SelectionScript : MonoBehaviour
             case "autorite":
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
+                spawnedGameObject.SetActive(true);
+                spawnedGameObject.transform.SetParent(this.transform.parent);
+                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
+                memo.Add(ruleType.getValue().getTag());
+                Destroy(gameObject);
+
+                break;
+
+            case "sauver":
+                Debug.Log(ruleType.getValue().getTag());
+                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -193,10 +212,11 @@ public class SelectionScript : MonoBehaviour
                 break;
 
 
+
             case "aucune" :
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue());
+                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());

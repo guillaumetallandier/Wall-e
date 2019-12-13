@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,19 +21,22 @@ public class Personne : Acteur
 
     void Start()
     {
-        nav = GetComponent<NavMeshAgent>();
+       nav = GetComponent<NavMeshAgent>();
     }
-    public void SetUp(string name)
+    public void SetUp(string name,EnumPeople type)
     {
         base.name = name;
-      
+        this.type = type;
 
     }
     void Update()
     {
+       
         if (this.target != null)
         {
+            Debug.Log("pers va  :" + target.name.ToString());
             nav.SetDestination(this.target.transform.position);
+            Debug.Log(this.name + " est partie vers " + this.target.name);
         }
 
 
@@ -40,9 +44,9 @@ public class Personne : Acteur
 
     void OnCollisionEnter(Collision collisionInfo)
     {
+        
         if (collisionInfo.collider.tag == "escape")
         {
-
             Debug.Log(this.name + " s'est enfui");
         }
 
@@ -67,6 +71,11 @@ public class Personne : Acteur
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hFrapper", "", "");
     }
 
+    internal void SetUp(string v, Type type)
+    {
+        throw new NotImplementedException();
+    }
+
     public void die()
     {
         GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hMourir", "", "");
@@ -75,7 +84,15 @@ public class Personne : Acteur
     public void execute(Action a, GameObject p)
     {
         this.action = a;
-        this.setDest(p.gameObject);
+        if(a.getType() == "voler")
+        {
+            this.setDest(p.gameObject);
+        }
+        else
+        {
+            this.action.execute(p,robot.gameObject);
+        }
+        
     }
 
     public GameObject getGo()
@@ -107,9 +124,14 @@ public class Personne : Acteur
         robot = bidule;
     }
 
+    public Robot getRobot()
+    {
+        return this.robot;
+    }
+
     public void presenteInventaire()
     {
-        if (this.item == null)
+        if (this.name == null)
         {
             Debug.Log(this.name + " : Mon inventaire est vide");
             //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hInventaireVide", "", "");
@@ -127,13 +149,26 @@ public class Personne : Acteur
     {
         Debug.Log("Au voleur !! A l'assassin !!! AU MEURTRIER !!!!!!");
         //GameObject.FindGameObjectWithTag("maitre").GetComponent<Master>().RecupTexte("hEstVoler", "", "");
-
-        this.ordonne("attraper");
     }
 
     public void ordonne(string ordre)
     {
         Debug.Log(ordre);
         robot.recevoirOrdre(ordre,this.name);
+    }
+
+    public void appelerSecours()
+    {
+        Debug.Log("It is fine !");
+        this.ordonne("sauver");
+    }
+
+    public void setTarget(GameObject gm)
+    {
+        this.target = gm;
+    }
+    public GameObject getTarget()
+    {
+        return this.target;
     }
 }

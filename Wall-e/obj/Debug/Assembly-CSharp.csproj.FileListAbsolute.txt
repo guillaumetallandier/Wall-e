@@ -1,0 +1,2 @@
+X:\t432_maf19-t3-c\Wall-e\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+X:\t432_maf19-t3-c\Wall-e\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

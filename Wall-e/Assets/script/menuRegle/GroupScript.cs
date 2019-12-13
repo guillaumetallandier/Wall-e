@@ -6,16 +6,39 @@ public class GroupScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject selection;
+    public GameObject addRule;
     public Transform contentPanel;
+    private int nextNum;
     void Start()
     {
-        for(int i = 0; i < 3; i++)
-        {
-            GameObject spawnedGameObject = (GameObject)GameObject.Instantiate(selection);
-            spawnedGameObject.SetActive(true);
-            spawnedGameObject.transform.SetParent(contentPanel);
-            
-        }
+        this.nextNum = 1;
+        Debug.Log(nextNum);
+        Invoke("spawnSelection",0.25f);
+        Invoke("spawnAddRule",0.50f);
+    }
+
+    public void spawnSelection()
+    {
+        GameObject spawnedGameObject = (GameObject)GameObject.Instantiate(selection);
+        spawnedGameObject.GetComponent<SelectionScript>().Setup(this.nextNum);
+        spawnedGameObject.SetActive(true);
+        spawnedGameObject.transform.SetParent(contentPanel);
+        this.nextNum++;
+    }
+    public void spawnSelection(int pos)
+    {
+        GameObject spawnedGameObject = (GameObject)GameObject.Instantiate(selection);
+        spawnedGameObject.GetComponent<SelectionScript>().Setup(this.nextNum);
+        spawnedGameObject.SetActive(true);
+        spawnedGameObject.transform.SetParent(contentPanel);
+        spawnedGameObject.transform.SetSiblingIndex(pos);
+        this.nextNum++;
+    }
+    public void spawnAddRule()
+    {
+        GameObject spawnedGameObject = (GameObject)GameObject.Instantiate(addRule);
+        spawnedGameObject.SetActive(true);
+        spawnedGameObject.transform.SetParent(contentPanel);
     }
 
 }

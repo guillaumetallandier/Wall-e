@@ -10,8 +10,9 @@ public class RuleScript : MonoBehaviour
     public Text regleLabel;
     public Button button;
     public GameObject selection;
+    public Text pos;
 
-    public void Setup(Regle r)
+    public void Setup(Regle r, string num)
     {
         this.regle = r;
         this.regleLabel.text = r.getDescription();
