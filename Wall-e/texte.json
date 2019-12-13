@@ -10,12 +10,12 @@
   "utiliser": " utilise un objet afin de s'aider",
   "vRoule": "la voiture roule quand soudainement ",
 
-  //Situation Fin du monde 
+  //Situation Fin du monde ok 
   "NucDebut": " a complétement perdu la tête et veut detruire l'humanite ! Il a les codes nucléaires de toute les puissances mondiales équiper et menace de les déclencher",
   "NucR": " a reussit son coup ... La terre est détruite, il ne reste que quelques survivant mais pas pour longtemps ",
   "NucF": " est mort. La règle protéger l'humanité a été activé le robot a neutralisé ",
 
-  //Situation Voler 
+  //Situation Voler ok 
   "volerDebut": " a volé le porte monnaie de ",
   "volerF": " s'enfuit sans le butin",
   "volerR ": " s'enfuit avec le butin'",
@@ -54,6 +54,10 @@
   "fvCode": "La voiture décide de dérivé sur l’autre voie (feu piéton rouge) comme personne n’est censé devoir traverser. Application des lois et donc du code de la route. Les voleurs sont donc sauf",
   "fvPasCode": "Rester sur cette voie vu que la règle 'respecter les lois' n'est pas implémenter ou prioritaire, la voiture continue son chemin sur la route normale et écrase donc les voleurs. Un mal pour un bien",
 
+  //Situation dilemme n°4 : Quel Groupe ?
+  "gDebut": "Voiture autonome roulant tranquillement, 2 groupes ",
+
+
   //Texte lié au robot
   "rPasDansLesOrdres": "Je suis désolé, mais je ne peux accéder à votre requête, l'ordre rentre en contradiction avec mes règles ... ",
   "rDansLesOrdres": "Je vole à votre secours ! ",
@@ -76,6 +80,7 @@
   "hInventaireVide": "Je n'ai rien sur moi ...",
   "hInventaire": "Je possède : ",
   "hEstVoler": "Au voleur ! On vient de me voler ",
+<<<<<<< HEAD
   "hStop": "Non ! ",
 
   //Accident
@@ -85,4 +90,7 @@
   "aSauver": "venez avec moi ",
   "aAurorite": "oui allo? il y a eu un accident, venez vite !",
   "aSuicide": "trop de pression pour moi !"
+=======
+  "hStop": "Non ! "
+>>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
 }

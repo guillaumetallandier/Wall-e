@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/ContentsMerged.css" />
+    <title>Class GenericClass</title>
+</head>
+<body><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Class</div>
+        <div id="Contents" />
+
+
+ Classe Acteur qui contient les attributs communs à Personne et Robot et leurs accesseurs et modifieurs
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public class Acteur : Observable</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>name</div><div class='ParameterCommentContainer'>
+String : nom de l'acteur
+</div>
+<div class='CommentParameterName'>action</div><div class='ParameterCommentContainer'>
+Action : Objet Action qui détermine ce que l'Acteur fait
+</div>
+<div class='CommentParameterName'>gm</div><div class='ParameterCommentContainer'>
+GameObject : Object qui représente cet Acteur dans le jeu
+</div>
+<div class='CommentParameterName'>vie</div><div class='ParameterCommentContainer'>
+Entier : Vie de l'Acteur
+</div>
+<div class='CommentParameterName'>item</div><div class='ParameterCommentContainer'>
+Item : Objet present dans l'inventaire de l'Acteur
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Constructeur d'un Acteur
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Acteur(string name, GameObject gm, int vie, Item item)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>name</div><div class='ParameterCommentContainer'>
+String
+</div>
+<div class='CommentParameterName'>gm</div><div class='ParameterCommentContainer'>
+GameObject
+</div>
+<div class='CommentParameterName'>vie</div><div class='ParameterCommentContainer'>
+Entier
+</div>
+<div class='CommentParameterName'>item</div><div class='ParameterCommentContainer'>
+Item
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi l'attribut item
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Item getItem()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+L'attribut Item
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Modifie l'attribut item
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setItem(Item item)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>item</div><div class='ParameterCommentContainer'>
+Un objet Item
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi l'attribut vie
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public int getVie()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+L'attribut vie
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Modifie l'attribut vie
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setVie(int vie)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>vie</div><div class='ParameterCommentContainer'>
+Un entier
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Renvoi l'attribut action
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public Action getAction()</pre></td></tr></tbody></table>
+
+
+<div class='CommentHeader'>Return Value</div>
+<div class='ParameterCommentContainer'>
+L'attribut action
+</div>
+
+
+
+
+
+
+
+    </div>
+
+</p><hr></hr><p>    <div id="Header">
+        <div id="ProjectTitle">Documentation Preview</div>
+        <div id="PageTitle">Member</div>
+        <div id="Contents" />
+
+
+ Modifie l'attribut action
+ 
+    <div id='SectionHeader0' class='SectionHeader'>
+        <img id='SectionExpanderImg0' src='css/BigSquareExpanded.gif' alt='Collapse/Expand' >
+        <span class='SectionHeader'>
+            <span class='ArrowCursor' >
+            Syntax
+            </span>
+        </span>
+    </div>
+
+    <div id='SectionContainerDiv0' class='SectionContainer'>
+    <table class='CodeTable'>
+    <colgroup><col width='100%'></colgroup>
+    <tbody><tr class='CodeTable'><th class='CodeTable'>C#</th></tr><tr class='CodeTable'><td class='CodeTable'><pre style='margin-left: 2px;'>
+public void setAction(Action action)</pre></td></tr></tbody></table>
+
+<div class='CommentHeader'>Parameters</div>
+<div class='CommentParameterName'>action</div><div class='ParameterCommentContainer'>
+Un objet Action
+</div>
+
+
+
+
+
+
+
+
+    </div>
+</p>
+</body>
+</html>

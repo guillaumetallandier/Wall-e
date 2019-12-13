@@ -20,6 +20,9 @@ public class Master2 : MonoBehaviour
         po2.GetComponent<Observable>().Setup();
         po3.GetComponent<Observable>().Setup();
 
+        voi1.GetComponent<Observable>().Setup();
+        robot.GetComponent<Robot>().Setup("walle",lr,lp);
+
 
        
         robot.GetComponent<Robot>().Setup("walle", lr, lp);
@@ -52,29 +55,4 @@ public class Master2 : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public Action aleAction()
-    {
-        System.Random rd = new System.Random();
-        int nbr = rd.Next(2);
-        Action a;
-
-        switch (nbr)
-        {
-            case 0:
-                a = new Voler();
-                break;
-
-            default:
-                a = new Frapper();
-                break;
-        }
-        return a;
-
-    }
 }

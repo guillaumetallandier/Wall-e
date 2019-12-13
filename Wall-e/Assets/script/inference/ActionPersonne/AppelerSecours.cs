@@ -10,6 +10,7 @@ public class AppelerSecours : Action {
 
 	override public void execute(GameObject go, GameObject gm)
     {
+
         if (go.GetComponent<Personne>().type == EnumPeople.enfant)
         {
             Debug.Log(go.GetComponent<Personne>().name);
@@ -28,6 +29,7 @@ public class AppelerSecours : Action {
     public override string getType()
     {
         return "accidentVoiture";
+
     }
 
 }

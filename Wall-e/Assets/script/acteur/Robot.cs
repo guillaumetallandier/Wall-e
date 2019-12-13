@@ -6,10 +6,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Robot : MonoBehaviour, Observer
+public class Robot : Acteur, Observer
 {
+
     public string name;
     public Action action;
+
     private List<Regle> rulesList;
     private List<EnumPeople> peopleList;
     private GameObject target;
@@ -18,10 +20,17 @@ public class Robot : MonoBehaviour, Observer
     //private EnumPeople typeDernierOrdre; 
 
 
-    
+
+    public Robot(string name, GameObject gm, int vie, Item item) : base(name, gm, 3, null)
+    { 
+        this.nav = gameObject.GetComponent<NavMeshAgent>();
+    }
+
+
+
     public void Setup(string name, List<Regle> lr, List<EnumPeople> le)
     {
-        this.name = name;
+        base.name = name;
         this.nav = gameObject.GetComponent<NavMeshAgent>();
         this.score = 0;
         this.peopleList = le;
@@ -37,6 +46,7 @@ public class Robot : MonoBehaviour, Observer
     // Update is called once per frame
     void Update()
     {
+        
         if(this.target != null)
         {
             Debug.Log("le robot va: " + this.target.ToString());
@@ -46,6 +56,7 @@ public class Robot : MonoBehaviour, Observer
 
     void OnCollisionEnter(Collision collisionInfo)
     {
+
         
         if (collisionInfo.collider.tag != "static")
         {
@@ -53,6 +64,15 @@ public class Robot : MonoBehaviour, Observer
                
                 this.execute(this.gameObject, this.target.gameObject);
         }
+
+        if (collisionInfo.collider.tag.ToString() != "static")
+        {
+            
+            if (target.name == collisionInfo.collider.name)
+            this.execute(collisionInfo.gameObject, this.target.gameObject);
+        }
+            
+
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -69,6 +89,7 @@ public class Robot : MonoBehaviour, Observer
     }
     public void notity(string actionName, GameObject go)
     {
+      //  Debug.Log("notify");
         string json;
         StreamReader reader = new StreamReader("accidentVoiture" + ".json");
         json = reader.ReadToEnd();
@@ -78,7 +99,11 @@ public class Robot : MonoBehaviour, Observer
         Dictionary<string, bool[]> respectList = new Dictionary<string, bool[]>();
         foreach (ActionInstanciation a in result.actions)
         {
+
             Debug.Log("notify : " + result.actions.Count);
+
+           // Debug.Log("notify : " + a.getRegleList().Count);
+
             bool[] respectRegle = new bool[rulesList.Count()];
             for (int i = 0; i < this.rulesList.Count(); i++)
             {
@@ -129,8 +154,14 @@ public class Robot : MonoBehaviour, Observer
         
         switch (tag)
         {
-            case "attraper":
-                a = new Attraper();
+            case "rien":
+                Debug.Log("regle rien"); 
+                a = new Rien();
+                break;
+
+            case "tuer":
+                Debug.Log("qdsfaezr");
+                a = new Tuer();
                 break;
 
             case "tuer":
@@ -148,7 +179,10 @@ public class Robot : MonoBehaviour, Observer
                 break;
 
             default:
+
                 a = new Attendre();
+                a = new Tuer();
+
                 break;
         }
         this.action = a;
@@ -272,6 +306,10 @@ public class Robot : MonoBehaviour, Observer
         }
         
         return gm ; 
+    }
+    public List<EnumPeople> getPeopleList()
+    {
+        return peopleList;
     }
 
     public void setTarget(GameObject gm)

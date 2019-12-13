@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: df077935e8172fe478ed1b5ba9cddc44
+timeCreated: 1576160524
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - po1: {fileID: 1184950528168646, guid: 66d25f46b5bcd154faaef73a4d7da707, type: 2}
+  - robot: {fileID: 1810557251231428, guid: dbe5833e125af3340a4c2f00d44ff92e, type: 2}
+  - btnnuc: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
