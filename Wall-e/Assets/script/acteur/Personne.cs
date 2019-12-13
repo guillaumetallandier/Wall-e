@@ -34,9 +34,7 @@ public class Personne : Acteur
        
         if (this.target != null)
         {
-           
             nav.SetDestination(this.target.transform.position);
-           
         }
 
 
