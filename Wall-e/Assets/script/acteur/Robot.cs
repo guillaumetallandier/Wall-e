@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -84,7 +84,7 @@ public class Robot : Acteur, Observer
 
     public void execute(GameObject go, GameObject gm)
     {
-        Debug.Log("je fais " + action.ToString());
+        
         action.execute(go,gm);
     }
     public void notity(string actionName, GameObject go)
