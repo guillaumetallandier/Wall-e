@@ -34,9 +34,9 @@ public class Personne : Acteur
        
         if (this.target != null)
         {
-            Debug.Log("pers va  :" + target.name.ToString());
+           
             nav.SetDestination(this.target.transform.position);
-            Debug.Log(this.name + " est partie vers " + this.target.name);
+           
         }
 
 
