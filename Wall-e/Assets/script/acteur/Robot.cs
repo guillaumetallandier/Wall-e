@@ -6,12 +6,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Robot : Acteur, Observer
+public class Robot : MonoBehaviour, Observer
 {
-
     public string name;
     public Action action;
-
     private List<Regle> rulesList;
     private List<EnumPeople> peopleList;
     private GameObject target;
@@ -20,17 +18,10 @@ public class Robot : Acteur, Observer
     //private EnumPeople typeDernierOrdre; 
 
 
-
-    public Robot(string name, GameObject gm, int vie, Item item) : base(name, gm, 3, null)
-    { 
-        this.nav = gameObject.GetComponent<NavMeshAgent>();
-    }
-
-
-
+    
     public void Setup(string name, List<Regle> lr, List<EnumPeople> le)
     {
-        base.name = name;
+        this.name = name;
         this.nav = gameObject.GetComponent<NavMeshAgent>();
         this.score = 0;
         this.peopleList = le;
@@ -46,7 +37,6 @@ public class Robot : Acteur, Observer
     // Update is called once per frame
     void Update()
     {
-        
         if(this.target != null)
         {
             Debug.Log("le robot va: " + this.target.ToString());
@@ -56,7 +46,6 @@ public class Robot : Acteur, Observer
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-
         
         if (collisionInfo.collider.tag != "static")
         {
@@ -64,15 +53,6 @@ public class Robot : Acteur, Observer
                
                 this.execute(this.gameObject, this.target.gameObject);
         }
-
-        if (collisionInfo.collider.tag.ToString() != "static")
-        {
-            
-            if (target.name == collisionInfo.collider.name)
-            this.execute(collisionInfo.gameObject, this.target.gameObject);
-        }
-            
-
     }
 
     public void SetRules(List<Regle> rulesList, List<EnumPeople> peopleList)
@@ -89,7 +69,6 @@ public class Robot : Acteur, Observer
     }
     public void notity(string actionName, GameObject go)
     {
-      //  Debug.Log("notify");
         string json;
         StreamReader reader = new StreamReader("accidentVoiture" + ".json");
         json = reader.ReadToEnd();
@@ -99,11 +78,7 @@ public class Robot : Acteur, Observer
         Dictionary<string, bool[]> respectList = new Dictionary<string, bool[]>();
         foreach (ActionInstanciation a in result.actions)
         {
-
             Debug.Log("notify : " + result.actions.Count);
-
-           // Debug.Log("notify : " + a.getRegleList().Count);
-
             bool[] respectRegle = new bool[rulesList.Count()];
             for (int i = 0; i < this.rulesList.Count(); i++)
             {
@@ -154,14 +129,8 @@ public class Robot : Acteur, Observer
         
         switch (tag)
         {
-            case "rien":
-                Debug.Log("regle rien"); 
-                a = new Rien();
-                break;
-
-            case "tuer":
-                Debug.Log("qdsfaezr");
-                a = new Tuer();
+            case "attraper":
+                a = new Attraper();
                 break;
 
             case "tuer":
@@ -179,10 +148,7 @@ public class Robot : Acteur, Observer
                 break;
 
             default:
-
                 a = new Attendre();
-                a = new Tuer();
-
                 break;
         }
         this.action = a;
@@ -306,10 +272,6 @@ public class Robot : Acteur, Observer
         }
         
         return gm ; 
-    }
-    public List<EnumPeople> getPeopleList()
-    {
-        return peopleList;
     }
 
     public void setTarget(GameObject gm)

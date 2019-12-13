@@ -34,11 +34,7 @@ public class Master_incendie : MonoBehaviour
 
         po1.GetComponent<Personne>().setRobot(robot.GetComponent<Robot>());
 
-<<<<<<< HEAD
         po1.GetComponent<Personne>().SetUp("Gege",EnumPeople.adulte);
-=======
-        //po1.GetComponent<Personne>().SetUp("Gege");
->>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
 
         Debug.Log("Personnage et Robot près");
 

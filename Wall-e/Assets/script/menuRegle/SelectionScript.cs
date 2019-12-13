@@ -66,16 +66,6 @@ public class SelectionScript : MonoBehaviour
         GameObject spawnedGameObject;
         switch (ruleType.getValue().getTag())
         {
-            case "aucune":
-                Debug.Log(ruleType.getValue().getTag());
-                spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
-                spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
-                spawnedGameObject.SetActive(true);
-                spawnedGameObject.transform.SetParent(this.transform.parent);
-                spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
-                memo.Add(ruleType.getValue().getTag());
-
-                break;
 
             case "nePasTuer":
                 //Debug.Log(ruleType.getValue().getTag());
@@ -201,7 +191,6 @@ public class SelectionScript : MonoBehaviour
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
                 spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
-<<<<<<< HEAD
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -214,8 +203,6 @@ public class SelectionScript : MonoBehaviour
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
                 spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
-=======
->>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
                 spawnedGameObject.SetActive(true);
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
@@ -224,13 +211,9 @@ public class SelectionScript : MonoBehaviour
 
                 break;
 
-<<<<<<< HEAD
 
 
             case "aucune" :
-=======
-            case "sauver":
->>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
                 Debug.Log(ruleType.getValue().getTag());
                 spawnedGameObject = (GameObject)GameObject.Instantiate(type1);
                 spawnedGameObject.GetComponent<RuleType1Script>().Setup(ruleType.getValue(), num.text);
@@ -238,13 +221,8 @@ public class SelectionScript : MonoBehaviour
                 spawnedGameObject.transform.SetParent(this.transform.parent);
                 spawnedGameObject.transform.SetSiblingIndex(gameObject.transform.GetSiblingIndex());
                 memo.Add(ruleType.getValue().getTag());
-                Destroy(gameObject);
 
                 break;
-
-
-
-            
 
             default:
                 break; 

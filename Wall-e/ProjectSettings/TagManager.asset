@@ -11,14 +11,9 @@ TagManager:
   - robot
   - gestionMenuRules
   - PanelTexte
-<<<<<<< HEAD
   - static
   - zoneSafe
   - voiture
-=======
-  - btnnuc
-  - static
->>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
   layers:
   - Default
   - TransparentFX
