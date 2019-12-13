@@ -29,7 +29,7 @@ Le projet "Wall-e" a pour but de comprendre la complexité et les limites des lo
 
 ## Autres liens 
 
-- Wiki : *pas encore disponible* 
+- <a href="https://git.unistra.fr/wall-e/t432_maf19-t3-c/wikis/home"> Wiki </a>
 
 #### Contribuable 
 
