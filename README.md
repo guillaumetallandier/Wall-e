@@ -1,6 +1,5 @@
 # t432_maf19-t3-c
 
-<<<<<<< HEAD
 =======
 Le projet "Wall-e" a pour but de comprendre la complexité et les limites des lois encadrant les robots et les intelligences artificielles. Cette compréhension se fait par la résolution de diverses situations plus ou moins complexe en ayant donné un ensemble de règle à un robot.  
 
@@ -42,4 +41,3 @@ Le projet "Wall-e" a pour but de comprendre la complexité et les limites des lo
 
 #### Développement 
 Unity, C# 
->>>>>>> 211e14e41debe52b5c11390b0012681fea20bb23
